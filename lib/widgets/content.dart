@@ -2615,19 +2615,20 @@ class _AboutPortfolioContentState extends State<AboutPortfolioContent> {
                 height: 20,
               ),
               FloatingActionButton.extended(
+                backgroundColor: Color(0xff6e5494),
                 label: Text(
-                  "Google",
+                  "GitHub",
                   style: GoogleFonts.interTight(
                     textStyle: Theme.of(context).textTheme.displayLarge,
                     fontSize: 20,
                     fontWeight: FontWeight.w600,
-                    color: Colors.black,
+                    color: Colors.white,
                   ),
                   textAlign: TextAlign.center,
                 ),
                 onPressed: () {
                   html.window.open(
-                      'https://drive.google.com/drive/folders/1G3DwQauxk5j2a9xtTLIh6FXvrtcGoZ7Z?usp=sharing',
+                      'https://github.com/TobyProsser/portfolio_2024',
                       '_blank');
                 },
               ),
@@ -2688,7 +2689,7 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
         ),
         widget.mobile
             ? MobileSwap(
-                youtubeLink: "https://youtu.be/aqsQiXQv4Sw",
+                youtubeLink: "https://www.youtube.com/shorts/ytwmHqqJVoA",
                 imagePath: "assets/images/videoCovers/LofiIslandsCover.png",
                 vertical: true,
               )
@@ -2894,7 +2895,7 @@ class ClimbingAppDesignContentState extends State<ClimbingAppDesignContent>
         ),
         widget.mobile
             ? MobileSwap(
-                youtubeLink: "https://youtu.be/aqsQiXQv4Sw",
+                youtubeLink: "https://youtube.com/shorts/VyNX46fG0c4",
                 imagePath: "assets/images/videoCovers/LofiIslandsCover.png",
                 vertical: true,
               )

@@ -89,7 +89,6 @@ class UnityContentState extends State<UnityContent>
                   )),
                 ),
               ),
-
         const SizedBox(
           height: 20,
         ),
@@ -127,88 +126,6 @@ class UnityContentState extends State<UnityContent>
             textAlign: TextAlign.center,
           ),
         ),
-        // SingleChildScrollView(
-        //   scrollDirection: Axis.horizontal,
-        //   child: Row(
-        //     children: [
-        //       Padding(
-        //         padding: const EdgeInsets.all(20.0),
-        //         child: Container(
-        //           width: MediaQuery.of(context).size.width * .25,
-        //           height: 500,
-        //           clipBehavior: Clip.hardEdge,
-        //           decoration: BoxDecoration(
-        //             color: const Color.fromARGB(
-        //                 255, 250, 253, 255), // Set the container color to blue
-        //             borderRadius: BorderRadius.circular(
-        //                 20), // Set the container edges to be curved
-        //             boxShadow: [
-        //               // Add a dropshadow effect
-        //               BoxShadow(
-        //                 color: Colors.black.withOpacity(
-        //                     0.5), // Set the shadow color to black with some opacity
-        //                 blurRadius: 10, // Set the blur radius of the shadow
-        //                 offset:
-        //                     const Offset(5, 5), // Set the offset of the shadow
-        //               ),
-        //             ],
-        //           ),
-        //           child: Image.asset("assets/images/ShellDrawing.jpeg"),
-        //         ),
-        //       ),
-        //       Padding(
-        //         padding: const EdgeInsets.all(20.0),
-        //         child: Container(
-        //           width: MediaQuery.of(context).size.width * .25,
-        //           height: 500,
-        //           clipBehavior: Clip.hardEdge,
-        //           decoration: BoxDecoration(
-        //             color: const Color.fromARGB(
-        //                 255, 250, 253, 255), // Set the container color to blue
-        //             borderRadius: BorderRadius.circular(
-        //                 20), // Set the container edges to be curved
-        //             boxShadow: [
-        //               // Add a dropshadow effect
-        //               BoxShadow(
-        //                 color: Colors.black.withOpacity(
-        //                     0.5), // Set the shadow color to black with some opacity
-        //                 blurRadius: 10, // Set the blur radius of the shadow
-        //                 offset:
-        //                     const Offset(5, 5), // Set the offset of the shadow
-        //               ),
-        //             ],
-        //           ),
-        //           child: Image.asset("assets/images/ShellDrawing.jpeg"),
-        //         ),
-        //       ),
-        //       Padding(
-        //         padding: const EdgeInsets.all(20.0),
-        //         child: Container(
-        //           width: MediaQuery.of(context).size.width * .25,
-        //           height: 500,
-        //           clipBehavior: Clip.hardEdge,
-        //           decoration: BoxDecoration(
-        //             color: const Color.fromARGB(
-        //                 255, 250, 253, 255), // Set the container color to blue
-        //             borderRadius: BorderRadius.circular(
-        //                 20), // Set the container edges to be curved
-        //             boxShadow: [
-        //               // Add a dropshadow effect
-        //               BoxShadow(
-        //                 color: Colors.black.withOpacity(
-        //                     0.5), // Set the shadow color to black with some opacity
-        //                 blurRadius: 10, // Set the blur radius of the shadow
-        //                 offset:
-        //                     const Offset(5, 5), // Set the offset of the shadow
-        //               ),
-        //             ],
-        //           ),
-        //           child: Image.asset("assets/images/ShellDrawing.jpeg"),
-        //         ),
-        //       ),
-        //     ],
-        //   ),
-        // ),
         const SizedBox(
           height: 20,
         ),
@@ -329,7 +246,6 @@ class UnityContentState extends State<UnityContent>
                   )),
                 ),
               ),
-
         const SizedBox(
           height: 20,
         ),
@@ -523,7 +439,6 @@ class UnityContentState extends State<UnityContent>
                   )),
                 ),
               ),
-
         const SizedBox(
           height: 20,
         ),
@@ -2689,8 +2604,9 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
         ),
         widget.mobile
             ? MobileSwap(
-                youtubeLink: "https://www.youtube.com/shorts/ytwmHqqJVoA",
-                imagePath: "assets/images/videoCovers/LofiIslandsCover.png",
+                youtubeLink:
+                    "https://youtube.com/shorts/ytwmHqqJVoA?feature=share",
+                imagePath: "assets/images/Hanger18/homeScreen.png",
                 vertical: true,
               )
             : Padding(
@@ -2718,7 +2634,7 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
                   ),
                   child: const Center(
                       child: SimpleHtmlYoutubeIframe(
-                    youtubeCode: "aqsQiXQv4Sw",
+                    youtubeCode: "ytwmHqqJVoA",
                     key: null,
                   )),
                 ),
@@ -2797,6 +2713,50 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
             textAlign: TextAlign.center,
           ),
         ),
+        const SizedBox(
+          height: 20,
+        ),
+        Text(
+          "Pitch Email:",
+          style: GoogleFonts.interTight(
+            textStyle: Theme.of(context).textTheme.displayLarge,
+            fontSize: 35,
+            fontWeight: FontWeight.w400,
+            color: Colors.black,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(
+          height: 3,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Container(
+            clipBehavior: Clip.hardEdge,
+            constraints: BoxConstraints(
+              maxWidth: 400,
+            ),
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(
+                  255, 250, 253, 255), // Set the container color to blue
+              borderRadius: BorderRadius.circular(
+                  20), // Set the container edges to be curved
+              boxShadow: [
+                // Add a dropshadow effect
+                BoxShadow(
+                  color: Colors.black.withOpacity(
+                      0.5), // Set the shadow color to black with some opacity
+                  blurRadius: 10, // Set the blur radius of the shadow
+                  offset: const Offset(5, 5), // Set the offset of the shadow
+                ),
+              ],
+            ),
+            child: Image.asset("assets/images/Hanger18/Hanger18Letter.PNG"),
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -2831,8 +2791,7 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
                     ),
                     onPressed: () {
                       html.window.open(
-                          'https://github.com/TobyProsser/LofiIslands',
-                          '_blank');
+                          'https://github.com/TobyProsser/Hanger18', '_blank');
                     },
                   ),
                 ],
@@ -2895,8 +2854,9 @@ class ClimbingAppDesignContentState extends State<ClimbingAppDesignContent>
         ),
         widget.mobile
             ? MobileSwap(
-                youtubeLink: "https://youtube.com/shorts/VyNX46fG0c4",
-                imagePath: "assets/images/videoCovers/LofiIslandsCover.png",
+                youtubeLink:
+                    "https://youtube.com/shorts/VyNX46fG0c4?feature=share",
+                imagePath: "assets/images/Hanger18/dropDown.PNG",
                 vertical: true,
               )
             : Padding(
@@ -2924,7 +2884,7 @@ class ClimbingAppDesignContentState extends State<ClimbingAppDesignContent>
                   ),
                   child: const Center(
                       child: SimpleHtmlYoutubeIframe(
-                    youtubeCode: "aqsQiXQv4Sw",
+                    youtubeCode: "VyNX46fG0c4",
                     key: null,
                   )),
                 ),
@@ -3037,14 +2997,128 @@ class ClimbingAppDesignContentState extends State<ClimbingAppDesignContent>
                     ),
                     onPressed: () {
                       html.window.open(
-                          'https://github.com/TobyProsser/LofiIslands',
-                          '_blank');
+                          'https://github.com/TobyProsser/Hanger18', '_blank');
                     },
                   ),
                 ],
               ),
             ),
           ],
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+      ],
+    ));
+  }
+}
+
+class ReviewBookDesignContent extends StatefulWidget {
+  ReviewBookDesignContent({
+    super.key,
+    this.globalKey,
+    this.open = true,
+    required this.mobile,
+  });
+  final bool mobile;
+  late GlobalKey<ReviewBookDesignContentState>? globalKey;
+  late bool open = true;
+
+  @override
+  State<ReviewBookDesignContent> createState() =>
+      ReviewBookDesignContentState();
+
+  ReviewBookDesignContent copyWith({
+    GlobalKey<ReviewBookDesignContentState>? globalKey,
+    bool? open,
+    bool? mobile,
+  }) {
+    return ReviewBookDesignContent(
+      globalKey: globalKey ?? this.globalKey,
+      open: open ?? this.open,
+      mobile: mobile ?? this.mobile,
+    );
+  }
+}
+
+class ReviewBookDesignContentState extends State<ReviewBookDesignContent>
+    with TickerProviderStateMixin {
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  void loadVideo() {}
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+        child: Column(
+      children: [
+        const SizedBox(
+          height: 20,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Container(
+            clipBehavior: Clip.hardEdge,
+            constraints: BoxConstraints(
+              maxWidth: 400,
+            ),
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(
+                  255, 250, 253, 255), // Set the container color to blue
+              borderRadius: BorderRadius.circular(
+                  20), // Set the container edges to be curved
+              boxShadow: [
+                // Add a dropshadow effect
+                BoxShadow(
+                  color: Colors.black.withOpacity(
+                      0.5), // Set the shadow color to black with some opacity
+                  blurRadius: 10, // Set the blur radius of the shadow
+                  offset: const Offset(5, 5), // Set the offset of the shadow
+                ),
+              ],
+            ),
+            child: Image.asset("assets/images/ReviewBookDesign.png"),
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        Text(
+          "ReviewBook",
+          style: GoogleFonts.interTight(
+            textStyle: Theme.of(context).textTheme.displayLarge,
+            fontSize: 35,
+            fontWeight: FontWeight.w400,
+            color: Colors.black,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(
+          height: 3,
+        ),
+        Container(
+          width: 300,
+          height: 1,
+          color: Colors.black,
+        ),
+        const SizedBox(
+          height: 7,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Text(
+            "Coming Soon...",
+            style: GoogleFonts.interTight(
+              textStyle: Theme.of(context).textTheme.displayLarge,
+              fontSize: 20,
+              fontWeight: FontWeight.w400,
+              color: Colors.black,
+            ),
+            textAlign: TextAlign.center,
+          ),
         ),
         const SizedBox(
           height: 20,

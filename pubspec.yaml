@@ -40,6 +40,7 @@ flutter:
     - assets/images/PortfolioDev/
     - assets/images/BSIInfo/
     - assets/images/BSIDev/
+    - assets/images/Hanger18/
     - assets/portfoliocontrol.riv
     - assets/images/SquareCardPattern.png
     - assets/images/Stars.png
@@ -81,3 +82,5 @@ flutter:
     - assets/images/videoCovers/SliceyJump.png
     - assets/images/videoCovers/SpeedTour.png
     - assets/images/videoCovers/TruckModel.PNG
+
+    - assets/images/ReviewBookDesign.png

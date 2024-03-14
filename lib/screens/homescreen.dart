@@ -452,7 +452,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         ClimbingAppDesignContent(
           mobile: false,
         ),
-        ClimbingAppDesignContent(
+        ReviewBookDesignContent(
           mobile: false,
         ),
       ],
@@ -871,7 +871,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                   ClimbingAppDesignContent(
                                     mobile: isWebMobile,
                                   ),
-                                  ClimbingAppDesignContent(
+                                  ReviewBookDesignContent(
                                     mobile: isWebMobile,
                                   ),
                                 ],

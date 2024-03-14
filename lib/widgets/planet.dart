@@ -233,7 +233,7 @@ class PlanetState extends State<Planet> with SingleTickerProviderStateMixin {
     } else if (widget.planetLookNum == 2) {
       titles = ['This Portfolio', 'About Me'];
     } else {
-      titles = ['OverView', 'Design/Dev', 'sd'];
+      titles = ['Hanger18', 'Hanger18 Dev', 'ReviewBook'];
     }
     return titles;
   }

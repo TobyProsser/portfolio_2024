@@ -471,6 +471,9 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         AboutPortfolioContent(
           mobile: false,
         ),
+        GalleryContent(
+          mobile: false,
+        ),
         AboutContent(
           mobile: false,
         ),
@@ -912,6 +915,9 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 key: planetKeys[3],
                                 contentClasses: [
                                   AboutPortfolioContent(
+                                    mobile: isWebMobile,
+                                  ),
+                                  GalleryContent(
                                     mobile: isWebMobile,
                                   ),
                                   AboutContent(

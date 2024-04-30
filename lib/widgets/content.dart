@@ -1594,8 +1594,7 @@ class BSIDevContentState extends State<BSIDevContent>
         ),
         widget.mobile
             ? MobileSwap(
-                youtubeLink:
-                    "https://youtube.com/shorts/1EAZN7g9Zl4?feature=share",
+                youtubeLink: "https://youtu.be/Irt-k8kTxe4",
                 imagePath: "assets/images/videoCovers/SpeedTour.png",
                 vertical: true,
               )
@@ -1624,7 +1623,7 @@ class BSIDevContentState extends State<BSIDevContent>
                   ),
                   child: const Center(
                       child: SimpleHtmlYoutubeIframe(
-                    youtubeCode: "1EAZN7g9Zl4",
+                    youtubeCode: "Irt-k8kTxe4",
                     key: null,
                   )),
                 ),
@@ -1650,7 +1649,7 @@ class BSIDevContentState extends State<BSIDevContent>
         ),
         widget.mobile
             ? MobileSwap(
-                youtubeLink: "https://youtu.be/kxncr2rNzbo",
+                youtubeLink: "https://youtu.be/q2LVQvYl_S8",
                 imagePath: "assets/images/videoCovers/BSIResponsive.png",
                 vertical: false,
               )
@@ -1679,7 +1678,7 @@ class BSIDevContentState extends State<BSIDevContent>
                   ),
                   child: const Center(
                       child: SimpleHtmlYoutubeIframe(
-                    youtubeCode: "kxncr2rNzbo",
+                    youtubeCode: "q2LVQvYl_S8",
                     key: null,
                   )),
                 ),
@@ -1705,7 +1704,7 @@ class BSIDevContentState extends State<BSIDevContent>
         ),
         widget.mobile
             ? MobileSwap(
-                youtubeLink: "https://youtu.be/BLEVkjmxw_4",
+                youtubeLink: "https://youtu.be/b4oC9aBOTXU",
                 imagePath: "assets/images/videoCovers/BSIDashboard.png",
                 vertical: false,
               )
@@ -1734,7 +1733,7 @@ class BSIDevContentState extends State<BSIDevContent>
                   ),
                   child: const Center(
                       child: SimpleHtmlYoutubeIframe(
-                    youtubeCode: "BLEVkjmxw_4",
+                    youtubeCode: "b4oC9aBOTXU",
                     key: null,
                   )),
                 ),
@@ -2176,6 +2175,222 @@ class _GalleryContentState extends State<GalleryContent> {
           const SizedBox(
             height: 20,
           ),
+          Text(
+            "Drawings",
+            style: GoogleFonts.interTight(
+              textStyle: Theme.of(context).textTheme.displayLarge,
+              fontSize: 35,
+              fontWeight: FontWeight.w400,
+              color: Colors.black,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(
+            height: 3,
+          ),
+          Container(
+            width: 300,
+            height: 1,
+            color: Colors.black,
+          ),
+          const SizedBox(
+            height: 7,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Container(
+              clipBehavior: Clip.hardEdge,
+              constraints: BoxConstraints(
+                maxWidth: 400,
+              ),
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(
+                    255, 250, 253, 255), // Set the container color to blue
+                borderRadius: BorderRadius.circular(
+                    20), // Set the container edges to be curved
+                boxShadow: [
+                  // Add a dropshadow effect
+                  BoxShadow(
+                    color: Colors.black.withOpacity(
+                        0.5), // Set the shadow color to black with some opacity
+                    blurRadius: 10, // Set the blur radius of the shadow
+                    offset: const Offset(5, 5), // Set the offset of the shadow
+                  ),
+                ],
+              ),
+              child: Image.asset("assets/images/ShellDrawing.jpeg"),
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Container(
+              clipBehavior: Clip.hardEdge,
+              constraints: BoxConstraints(
+                maxWidth: 400,
+              ),
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(
+                    255, 250, 253, 255), // Set the container color to blue
+                borderRadius: BorderRadius.circular(
+                    20), // Set the container edges to be curved
+                boxShadow: [
+                  // Add a dropshadow effect
+                  BoxShadow(
+                    color: Colors.black.withOpacity(
+                        0.5), // Set the shadow color to black with some opacity
+                    blurRadius: 10, // Set the blur radius of the shadow
+                    offset: const Offset(5, 5), // Set the offset of the shadow
+                  ),
+                ],
+              ),
+              child: Image.asset("assets/images/EyeDrawing.jpg"),
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Text(
+            "Models",
+            style: GoogleFonts.interTight(
+              textStyle: Theme.of(context).textTheme.displayLarge,
+              fontSize: 35,
+              fontWeight: FontWeight.w400,
+              color: Colors.black,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(
+            height: 3,
+          ),
+          Container(
+            width: 300,
+            height: 1,
+            color: Colors.black,
+          ),
+          const SizedBox(
+            height: 7,
+          ),
+          widget.mobile
+              ? MobileSwap(
+                  youtubeLink:
+                      "https://youtube.com/shorts/RHfPbcMsx1Q?feature=share",
+                  imagePath: "assets/images/videoCovers/BallDropModel.png",
+                  vertical: false,
+                )
+              : Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Container(
+                    clipBehavior: Clip.hardEdge,
+                    constraints: const BoxConstraints(
+                      maxWidth: 400, // Set the maximum width to 200
+                    ),
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 250, 253,
+                          255), // Set the container color to blue
+                      borderRadius: BorderRadius.circular(
+                          20), // Set the container edges to be curved
+                      boxShadow: [
+                        // Add a dropshadow effect
+                        BoxShadow(
+                          color: Colors.black.withOpacity(
+                              0.5), // Set the shadow color to black with some opacity
+                          blurRadius: 10, // Set the blur radius of the shadow
+                          offset: const Offset(
+                              5, 5), // Set the offset of the shadow
+                        ),
+                      ],
+                    ),
+                    child: const Center(
+                        child: SimpleHtmlYoutubeIframe(
+                      youtubeCode: "RHfPbcMsx1Q",
+                      key: null,
+                    )),
+                  ),
+                ),
+          const SizedBox(
+            height: 20,
+          ),
+          widget.mobile
+              ? MobileSwap(
+                  youtubeLink: "https://youtu.be/ZBtIcdt92lc",
+                  imagePath: "assets/images/videoCovers/RobotWalking.png",
+                  vertical: false,
+                )
+              : Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Container(
+                    clipBehavior: Clip.hardEdge,
+                    constraints: const BoxConstraints(
+                      maxWidth: 400, // Set the maximum width to 200
+                    ),
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 250, 253,
+                          255), // Set the container color to blue
+                      borderRadius: BorderRadius.circular(
+                          20), // Set the container edges to be curved
+                      boxShadow: [
+                        // Add a dropshadow effect
+                        BoxShadow(
+                          color: Colors.black.withOpacity(
+                              0.5), // Set the shadow color to black with some opacity
+                          blurRadius: 10, // Set the blur radius of the shadow
+                          offset: const Offset(
+                              5, 5), // Set the offset of the shadow
+                        ),
+                      ],
+                    ),
+                    child: const Center(
+                        child: SimpleHtmlYoutubeIframe(
+                      youtubeCode: "1cRI-09-5vE",
+                      key: null,
+                    )),
+                  ),
+                ),
+          const SizedBox(
+            height: 20,
+          ),
+          widget.mobile
+              ? MobileSwap(
+                  youtubeLink: "https://youtu.be/1cRI-09-5vE",
+                  imagePath: "assets/images/videoCovers/TruckModel.PNG",
+                  vertical: false,
+                )
+              : Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Container(
+                    clipBehavior: Clip.hardEdge,
+                    constraints: const BoxConstraints(
+                      maxWidth: 400, // Set the maximum width to 200
+                    ),
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 250, 253,
+                          255), // Set the container color to blue
+                      borderRadius: BorderRadius.circular(
+                          20), // Set the container edges to be curved
+                      boxShadow: [
+                        // Add a dropshadow effect
+                        BoxShadow(
+                          color: Colors.black.withOpacity(
+                              0.5), // Set the shadow color to black with some opacity
+                          blurRadius: 10, // Set the blur radius of the shadow
+                          offset: const Offset(
+                              5, 5), // Set the offset of the shadow
+                        ),
+                      ],
+                    ),
+                    child: const Center(
+                        child: SimpleHtmlYoutubeIframe(
+                      youtubeCode: "ZBtIcdt92lc",
+                      key: null,
+                    )),
+                  ),
+                ),
+          const SizedBox(
+            height: 20,
+          ),
         ],
       ),
     );
@@ -2245,7 +2460,7 @@ class _AboutContentState extends State<AboutContent> {
                 context,
                 MaterialPageRoute(
                   builder: (context) =>
-                      const FullScreenImage("assets/images/ResumePic1.png"),
+                      const FullScreenImage("assets/images/ResumeImage.png"),
                 ),
               );
             },
@@ -2272,50 +2487,12 @@ class _AboutContentState extends State<AboutContent> {
                     ),
                   ],
                 ),
-                child: Image.asset("assets/images/ResumePic1.png"),
+                child: Image.asset("assets/images/ResumeImage.png"),
               ),
             ),
           ),
           const SizedBox(
             height: 20,
-          ),
-          GestureDetector(
-            onTap: () {
-              // navigate to a new page with the full screen image
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) =>
-                      const FullScreenImage("assets/images/ResumePic2.png"),
-                ),
-              );
-            },
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Container(
-                clipBehavior: Clip.hardEdge,
-                constraints: BoxConstraints(
-                  maxWidth: 400,
-                ),
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(
-                      255, 250, 253, 255), // Set the container color to blue
-                  borderRadius: BorderRadius.circular(
-                      20), // Set the container edges to be curved
-                  boxShadow: [
-                    // Add a dropshadow effect
-                    BoxShadow(
-                      color: Colors.black.withOpacity(
-                          0.5), // Set the shadow color to black with some opacity
-                      blurRadius: 10, // Set the blur radius of the shadow
-                      offset:
-                          const Offset(5, 5), // Set the offset of the shadow
-                    ),
-                  ],
-                ),
-                child: Image.asset("assets/images/ResumePic2.png"),
-              ),
-            ),
           ),
           const SizedBox(
             height: 20,
@@ -2798,6 +2975,67 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
               ),
             ),
           ],
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        Text(
+          "Gym Poster",
+          style: GoogleFonts.interTight(
+            textStyle: Theme.of(context).textTheme.displayLarge,
+            fontSize: 35,
+            fontWeight: FontWeight.w400,
+            color: Colors.black,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(
+          height: 3,
+        ),
+        Container(
+          width: 300,
+          height: 1,
+          color: Colors.black,
+        ),
+        const SizedBox(
+          height: 7,
+        ),
+        GestureDetector(
+          onTap: () {
+            // navigate to a new page with the full screen image
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) =>
+                    const FullScreenImage("assets/images/ClimberLBPoster.png"),
+              ),
+            );
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Container(
+              clipBehavior: Clip.hardEdge,
+              constraints: BoxConstraints(
+                maxWidth: 400,
+              ),
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(
+                    255, 250, 253, 255), // Set the container color to blue
+                borderRadius: BorderRadius.circular(
+                    20), // Set the container edges to be curved
+                boxShadow: [
+                  // Add a dropshadow effect
+                  BoxShadow(
+                    color: Colors.black.withOpacity(
+                        0.5), // Set the shadow color to black with some opacity
+                    blurRadius: 10, // Set the blur radius of the shadow
+                    offset: const Offset(5, 5), // Set the offset of the shadow
+                  ),
+                ],
+              ),
+              child: Image.asset("assets/images/ClimberLBPoster.png"),
+            ),
+          ),
         ),
         const SizedBox(
           height: 20,

@@ -50,13 +50,13 @@ flutter:
     - assets/images/Tiles2.png
     - assets/images/blueprints1.png
     - assets/images/blueprints2.png
+    - assets/images/ClimberLBPoster.png
 
     - assets/sounds/Select1.wav
     - assets/sounds/Select2.wav
     - assets/sounds/Laser.mp3
     - assets/pdfs/ArcMastermind_EpicGrantApplication.pdf
-    - assets/images/ResumePic1.png
-    - assets/images/ResumePic2.png
+    - assets/images/ResumeImage.png
     - assets/sounds/MoveToSideClip.mp3
     - NewLaserClip.mp3
     - assets/sounds/FutureToPlanetClip.mp3

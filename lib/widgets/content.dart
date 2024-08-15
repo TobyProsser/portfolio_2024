@@ -2781,8 +2781,7 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
         ),
         widget.mobile
             ? MobileSwap(
-                youtubeLink:
-                    "https://youtube.com/shorts/ytwmHqqJVoA?feature=share",
+                youtubeLink: "https://www.youtube.com/watch?v=wPDQrEsVuAw",
                 imagePath: "assets/images/Hanger18/homeScreen.png",
                 vertical: true,
               )
@@ -2811,7 +2810,7 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
                   ),
                   child: const Center(
                       child: SimpleHtmlYoutubeIframe(
-                    youtubeCode: "ytwmHqqJVoA",
+                    youtubeCode: "wPDQrEsVuAw",
                     key: null,
                   )),
                 ),
@@ -2928,53 +2927,8 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
                 ),
               ],
             ),
-            child: Image.asset("assets/images/Hanger18/Hanger18Letter.PNG"),
+            child: Image.asset("assets/images/Hanger18/Hanger18Letter.png"),
           ),
-        ),
-        const SizedBox(
-          height: 20,
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                children: [
-                  Text(
-                    "View the Code: ",
-                    style: GoogleFonts.interTight(
-                      textStyle: Theme.of(context).textTheme.displayLarge,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.black,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  FloatingActionButton.extended(
-                    backgroundColor: Color(0xff6e5494),
-                    label: Text(
-                      "GitHub",
-                      style: GoogleFonts.interTight(
-                        textStyle: Theme.of(context).textTheme.displayLarge,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xfffafafa),
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                    onPressed: () {
-                      html.window.open(
-                          'https://github.com/TobyProsser/Hanger18', '_blank');
-                    },
-                  ),
-                ],
-              ),
-            ),
-          ],
         ),
         const SizedBox(
           height: 20,
@@ -3039,6 +2993,48 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
         ),
         const SizedBox(
           height: 20,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Text(
+                    "View the Code: ",
+                    style: GoogleFonts.interTight(
+                      textStyle: Theme.of(context).textTheme.displayLarge,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.black,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  FloatingActionButton.extended(
+                    backgroundColor: Color(0xff6e5494),
+                    label: Text(
+                      "GitHub",
+                      style: GoogleFonts.interTight(
+                        textStyle: Theme.of(context).textTheme.displayLarge,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xfffafafa),
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    onPressed: () {
+                      html.window.open(
+                          'https://github.com/TobyProsser/Hanger18', '_blank');
+                    },
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       ],
     ));
@@ -3162,6 +3158,82 @@ class ClimbingAppDesignContentState extends State<ClimbingAppDesignContent>
               color: Colors.black,
             ),
             textAlign: TextAlign.center,
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        GestureDetector(
+          onTap: () {
+            // navigate to a new page with the full screen image
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) =>
+                    FullScreenImage("assets/images/Hanger18/IMG_2512.PNG"),
+              ),
+            );
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Container(
+              height: 400,
+              clipBehavior: Clip.hardEdge,
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(
+                    255, 250, 253, 255), // Set the container color to blue
+                borderRadius: BorderRadius.circular(
+                    20), // Set the container edges to be curved
+                boxShadow: [
+                  // Add a dropshadow effect
+                  BoxShadow(
+                    color: Colors.black.withOpacity(
+                        0.5), // Set the shadow color to black with some opacity
+                    blurRadius: 10, // Set the blur radius of the shadow
+                    offset: const Offset(5, 5), // Set the offset of the shadow
+                  ),
+                ],
+              ),
+              child: Image.asset('assets/images/Hanger18/IMG_2512.PNG'),
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        GestureDetector(
+          onTap: () {
+            // navigate to a new page with the full screen image
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) =>
+                    FullScreenImage("assets/images/Hanger18/IMG_2495.jpg"),
+              ),
+            );
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Container(
+              height: 400,
+              clipBehavior: Clip.hardEdge,
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(
+                    255, 250, 253, 255), // Set the container color to blue
+                borderRadius: BorderRadius.circular(
+                    20), // Set the container edges to be curved
+                boxShadow: [
+                  // Add a dropshadow effect
+                  BoxShadow(
+                    color: Colors.black.withOpacity(
+                        0.5), // Set the shadow color to black with some opacity
+                    blurRadius: 10, // Set the blur radius of the shadow
+                    offset: const Offset(5, 5), // Set the offset of the shadow
+                  ),
+                ],
+              ),
+              child: Image.asset('assets/images/Hanger18/IMG_2495.jpg'),
+            ),
           ),
         ),
         const SizedBox(
@@ -3296,29 +3368,39 @@ class ReviewBookDesignContentState extends State<ReviewBookDesignContent>
         const SizedBox(
           height: 20,
         ),
-        Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Container(
-            clipBehavior: Clip.hardEdge,
-            constraints: BoxConstraints(
-              maxWidth: 400,
+        GestureDetector(
+          onTap: () {
+            // navigate to a new page with the full screen image
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) =>
+                    FullScreenImage("assets/images/ReviewBookDesign.png"),
+              ),
+            );
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Container(
+              width: 400,
+              clipBehavior: Clip.hardEdge,
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(
+                    255, 250, 253, 255), // Set the container color to blue
+                borderRadius: BorderRadius.circular(
+                    20), // Set the container edges to be curved
+                boxShadow: [
+                  // Add a dropshadow effect
+                  BoxShadow(
+                    color: Colors.black.withOpacity(
+                        0.5), // Set the shadow color to black with some opacity
+                    blurRadius: 10, // Set the blur radius of the shadow
+                    offset: const Offset(5, 5), // Set the offset of the shadow
+                  ),
+                ],
+              ),
+              child: Image.asset("assets/images/ReviewBookDesign.png"),
             ),
-            decoration: BoxDecoration(
-              color: const Color.fromARGB(
-                  255, 250, 253, 255), // Set the container color to blue
-              borderRadius: BorderRadius.circular(
-                  20), // Set the container edges to be curved
-              boxShadow: [
-                // Add a dropshadow effect
-                BoxShadow(
-                  color: Colors.black.withOpacity(
-                      0.5), // Set the shadow color to black with some opacity
-                  blurRadius: 10, // Set the blur radius of the shadow
-                  offset: const Offset(5, 5), // Set the offset of the shadow
-                ),
-              ],
-            ),
-            child: Image.asset("assets/images/ReviewBookDesign.png"),
           ),
         ),
         const SizedBox(
@@ -3326,6 +3408,81 @@ class ReviewBookDesignContentState extends State<ReviewBookDesignContent>
         ),
         Text(
           "ReviewBook",
+          style: GoogleFonts.interTight(
+            textStyle: Theme.of(context).textTheme.displayLarge,
+            fontSize: 35,
+            fontWeight: FontWeight.w400,
+            color: Colors.black,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(
+          height: 3,
+        ),
+        Container(
+          width: 300,
+          height: 1,
+          color: Colors.black,
+        ),
+        const SizedBox(
+          height: 7,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Text(
+            "Coming Soon...",
+            style: GoogleFonts.interTight(
+              textStyle: Theme.of(context).textTheme.displayLarge,
+              fontSize: 20,
+              fontWeight: FontWeight.w400,
+              color: Colors.black,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        GestureDetector(
+          onTap: () {
+            // navigate to a new page with the full screen image
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) =>
+                    FullScreenImage("assets/images/ShiftAppDesign.png"),
+              ),
+            );
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Container(
+              width: 400,
+              clipBehavior: Clip.hardEdge,
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(
+                    255, 250, 253, 255), // Set the container color to blue
+                borderRadius: BorderRadius.circular(
+                    20), // Set the container edges to be curved
+                boxShadow: [
+                  // Add a dropshadow effect
+                  BoxShadow(
+                    color: Colors.black.withOpacity(
+                        0.5), // Set the shadow color to black with some opacity
+                    blurRadius: 10, // Set the blur radius of the shadow
+                    offset: const Offset(5, 5), // Set the offset of the shadow
+                  ),
+                ],
+              ),
+              child: Image.asset("assets/images/ShiftAppDesign.png"),
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        Text(
+          "Shifts",
           style: GoogleFonts.interTight(
             textStyle: Theme.of(context).textTheme.displayLarge,
             fontSize: 35,

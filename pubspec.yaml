@@ -51,6 +51,9 @@ flutter:
     - assets/images/blueprints1.png
     - assets/images/blueprints2.png
     - assets/images/ClimberLBPoster.png
+    - assets/images/Hanger18/IMG_2495.jpg
+    - assets/images/Hanger18/IMG_2512.PNG
+    - assets/images/Hanger18/Hanger18Letter.png
 
     - assets/sounds/Select1.wav
     - assets/sounds/Select2.wav
@@ -84,3 +87,4 @@ flutter:
     - assets/images/videoCovers/TruckModel.PNG
 
     - assets/images/ReviewBookDesign.png
+    - assets/images/ShiftAppDesign.png

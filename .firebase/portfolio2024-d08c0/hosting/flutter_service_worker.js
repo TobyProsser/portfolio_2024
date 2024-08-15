@@ -3,9 +3,9 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "03c2761e22b26ec7950657b6bed9b3b4",
-"assets/AssetManifest.bin.json": "994ec430fecf8c6ee7077232f0779201",
-"assets/AssetManifest.json": "fafc2bc1230bdf906706be2b0fd56b49",
+const RESOURCES = {"assets/AssetManifest.bin": "0c39e7f9ac8e26bc078cb8541bc29198",
+"assets/AssetManifest.bin.json": "7648b423c82fc84678d74f680cbc1f6a",
+"assets/AssetManifest.json": "b727a761c8d65f39fb33cbf8c88f7a57",
 "assets/assets/images/ArcMastermindText1.png": "016b9873c18597a1bd4e6d5d81a76a1a",
 "assets/assets/images/blueprints1.png": "76015b547c88fce4322f04c2f1378345",
 "assets/assets/images/blueprints2.png": "4cf42ca41bdf55aea6f98cbbdcd47f31",
@@ -16,6 +16,7 @@ const RESOURCES = {"assets/AssetManifest.bin": "03c2761e22b26ec7950657b6bed9b3b4
 "assets/assets/images/BSIInfo/Slide3.PNG": "9923d53fb8b915c8150be3f70686137b",
 "assets/assets/images/BSIInfo/Slide4.PNG": "27b44e25bb45416fef1882c93969737d",
 "assets/assets/images/BSIInfo/Slide5.PNG": "32944685f2b1e5dc89a9876a31b81475",
+"assets/assets/images/ClimberLBPoster.png": "d470d1da5f0fff748f3dbd23ae2dcac7",
 "assets/assets/images/EyeDrawing.jpg": "fc4710ab583d961961c2cd80857eb86e",
 "assets/assets/images/GamesGallery1.png": "6f30070d9bd006b89b70fe3a439d2480",
 "assets/assets/images/GamesGallery2.png": "635456ceba1ddd7644563ae298c960d6",
@@ -26,6 +27,7 @@ const RESOURCES = {"assets/AssetManifest.bin": "03c2761e22b26ec7950657b6bed9b3b4
 "assets/assets/images/Hanger18/register.PNG": "d4dd2ab19da083de4309fb549cdd7070",
 "assets/assets/images/PortfolioDev/RiveSS1.JPG": "5040daf4f20ffd886ab98310f1e28aca",
 "assets/assets/images/PortfolioDev/RiveSS2.JPG": "939be82a5cab9e7ec7cfcc395506c42e",
+"assets/assets/images/ResumeImage.png": "84d254900e1ce176d0bf46b140cab885",
 "assets/assets/images/ResumePic1.png": "43d1c6a71bf43fa10737753a1b6f205c",
 "assets/assets/images/ResumePic2.png": "9887cf6010b9248bf2db3abfeabb0a24",
 "assets/assets/images/ReviewBookDesign.png": "7ecbefc1d26592167ae8356886b030a6",
@@ -83,9 +85,9 @@ const RESOURCES = {"assets/AssetManifest.bin": "03c2761e22b26ec7950657b6bed9b3b4
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "34a47643cffb2e4dae7e4856a4f784b1",
-"/": "34a47643cffb2e4dae7e4856a4f784b1",
-"main.dart.js": "b18f7be6ba8280520048b60fe7363267",
+"index.html": "daa2ae1b96886dc8ca041e2cccf62447",
+"/": "daa2ae1b96886dc8ca041e2cccf62447",
+"main.dart.js": "07bfc43d5a9c4dd286cf7547d14cbb57",
 "manifest.json": "01dd59f21aa6f181c40338248238a741",
 "version.json": "25826202bdc14de19c35d088d68e528f"};
 // The application shell files that are downloaded before a service worker can

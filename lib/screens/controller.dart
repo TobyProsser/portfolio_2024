@@ -294,11 +294,7 @@ class ControllerWidgetState extends State<ControllerWidget>
 
     return RawKeyboardListener(
       focusNode: _focusNode,
-      // A callback that is invoked whenever the user presses or releases a key
-      onKey: (event) {
-        // Check if the key is pressed and not repeated
-        if (event is RawKeyDownEvent && event.data is RawKeyEventDataWindows) {}
-      },
+      onKey: _handleKeyEvent,
       child: _loaded
           ? Column(
               children: [
@@ -658,5 +654,58 @@ class ControllerWidgetState extends State<ControllerWidget>
               color: Colors.red,
             ),
     );
+  }
+
+  // A map to store the key codes and the corresponding directions
+  final Map<int, String> _keyMap = {
+    LogicalKeyboardKey.keyW.keyId: 'Up',
+    LogicalKeyboardKey.keyA.keyId: 'Left',
+    LogicalKeyboardKey.keyS.keyId: 'Down',
+    LogicalKeyboardKey.keyD.keyId: 'Right',
+    LogicalKeyboardKey.arrowUp.keyId: 'Up',
+    LogicalKeyboardKey.arrowLeft.keyId: 'Left',
+    LogicalKeyboardKey.arrowDown.keyId: 'Down',
+    LogicalKeyboardKey.arrowRight.keyId: 'Right',
+    LogicalKeyboardKey.space.keyId: 'Space',
+    LogicalKeyboardKey.enter.keyId: 'Enter',
+    LogicalKeyboardKey.escape.keyId: 'Esc',
+    LogicalKeyboardKey.digit1.keyId: '1',
+    LogicalKeyboardKey.digit2.keyId: '2',
+  };
+
+// A list to store the pressed directions
+  final List<String> _pressedDirections = [];
+
+  final controller = ControllerWidget(mobile: false);
+// A method to handle the key events
+  void _handleKeyEvent(RawKeyEvent event) {
+    // Get the key code of the event
+    final int keyCode = event.logicalKey.keyId;
+
+    // Check if the key code is in the map
+    if (_keyMap.containsKey(keyCode)) {
+      // Get the direction of the key code
+      final String direction = _keyMap[keyCode]!;
+
+      // Check if the event is a key down event
+      if (event is RawKeyDownEvent) {
+        if (inputCount <= 6) {
+          if (direction == 'Up') {
+            tutorial("up");
+          } else if (direction == 'Left') {
+            tutorial("left");
+          } else if (direction == 'Down') {
+            tutorial("down");
+          } else if (direction == 'Right') {
+            tutorial("right");
+          } else if (direction == 'Space' || direction == '1') {
+          } else if (direction == 'Enter' || direction == '2') {
+            tutorial("button2");
+          } else if (direction == 'Esc') {
+            tutorial("home");
+          }
+        }
+      }
+    }
   }
 }

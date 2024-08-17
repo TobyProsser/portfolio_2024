@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_2024/screens/homescreen.dart';
 import 'package:rive/rive.dart';
 
-import 'content.dart';
 import 'flagwidget.dart';
 
 // The stateful widget that contains the container and the button
@@ -90,7 +89,7 @@ class ContainerWidget extends StatefulWidget {
       leftStart: leftStart ?? this.leftStart,
       atThisPlanet: atThisPlanet ?? this.atThisPlanet,
       title: title ?? this.title, hsKey: hsKey ?? this.hsKey,
-      index: index ?? this.index, mobile: mobile ?? this.mobile,
+      index: index ?? this.index, mobile: mobile ?? mobile,
       // Assign any other properties you need for the Planet class
     );
   }

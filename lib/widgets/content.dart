@@ -54,7 +54,7 @@ class UnityContentState extends State<UnityContent>
           height: 20,
         ),
         widget.mobile
-            ? MobileSwap(
+            ? const MobileSwap(
                 youtubeLink: "https://youtu.be/aqsQiXQv4Sw",
                 imagePath: "assets/images/videoCovers/LofiIslandsCover.png",
                 vertical: true,
@@ -184,14 +184,14 @@ class UnityContentState extends State<UnityContent>
                     height: 20,
                   ),
                   FloatingActionButton.extended(
-                    backgroundColor: Color(0xff6e5494),
+                    backgroundColor: const Color(0xff6e5494),
                     label: Text(
                       "GitHub",
                       style: GoogleFonts.interTight(
                         textStyle: Theme.of(context).textTheme.displayLarge,
                         fontSize: 20,
                         fontWeight: FontWeight.w600,
-                        color: Color(0xfffafafa),
+                        color: const Color(0xfffafafa),
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -210,7 +210,7 @@ class UnityContentState extends State<UnityContent>
           height: 20,
         ),
         widget.mobile
-            ? MobileSwap(
+            ? const MobileSwap(
                 youtubeLink:
                     "https://youtube.com/shorts/xpuXeBJluq8?feature=share",
                 imagePath: "assets/images/videoCovers/PlanetWalker.png",
@@ -341,14 +341,14 @@ class UnityContentState extends State<UnityContent>
                     height: 20,
                   ),
                   FloatingActionButton.extended(
-                    backgroundColor: Color(0xff6e5494),
+                    backgroundColor: const Color(0xff6e5494),
                     label: Text(
                       "GitHub",
                       style: GoogleFonts.interTight(
                         textStyle: Theme.of(context).textTheme.displayLarge,
                         fontSize: 20,
                         fontWeight: FontWeight.w600,
-                        color: Color(0xfffafafa),
+                        color: const Color(0xfffafafa),
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -403,7 +403,7 @@ class UnityContentState extends State<UnityContent>
           height: 20,
         ),
         widget.mobile
-            ? MobileSwap(
+            ? const MobileSwap(
                 youtubeLink:
                     "https://youtube.com/shorts/Xwrs9FQPljg?feature=share",
                 imagePath: "assets/images/videoCovers/SliceyJump.png",
@@ -534,14 +534,14 @@ class UnityContentState extends State<UnityContent>
                     height: 20,
                   ),
                   FloatingActionButton.extended(
-                    backgroundColor: Color(0xff6e5494),
+                    backgroundColor: const Color(0xff6e5494),
                     label: Text(
                       "GitHub",
                       style: GoogleFonts.interTight(
                         textStyle: Theme.of(context).textTheme.displayLarge,
                         fontSize: 20,
                         fontWeight: FontWeight.w600,
-                        color: Color(0xfffafafa),
+                        color: const Color(0xfffafafa),
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -650,7 +650,7 @@ class UnrealContentState extends State<UnrealContent>
           height: 20,
         ),
         widget.mobile
-            ? MobileSwap(
+            ? const MobileSwap(
                 youtubeLink: "https://youtu.be/fL1uo3cDW4U",
                 imagePath: "assets/images/videoCovers/ArcMastermind.png",
                 vertical: false,
@@ -775,7 +775,7 @@ class UnrealContentState extends State<UnrealContent>
             padding: const EdgeInsets.all(20.0),
             child: Container(
               clipBehavior: Clip.hardEdge,
-              constraints: BoxConstraints(
+              constraints: const BoxConstraints(
                 maxWidth: 400,
               ),
               decoration: BoxDecoration(
@@ -894,14 +894,14 @@ class UnrealContentState extends State<UnrealContent>
               height: 20,
             ),
             FloatingActionButton.extended(
-              backgroundColor: Color(0xff6e5494),
+              backgroundColor: const Color(0xff6e5494),
               label: Text(
                 "GitHub",
                 style: GoogleFonts.interTight(
                   textStyle: Theme.of(context).textTheme.displayLarge,
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
-                  color: Color(0xfffafafa),
+                  color: const Color(0xfffafafa),
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -916,7 +916,7 @@ class UnrealContentState extends State<UnrealContent>
           height: 20,
         ),
         widget.mobile
-            ? MobileSwap(
+            ? const MobileSwap(
                 youtubeLink: "https://youtu.be/b1BuuSyNqaQ",
                 imagePath: "assets/images/videoCovers/RubixSurvival.png",
                 vertical: false,
@@ -1048,7 +1048,7 @@ class UnrealContentState extends State<UnrealContent>
               context,
               MaterialPageRoute(
                 builder: (context) =>
-                    FullScreenImage("assets/images/blueprints1.png"),
+                    const FullScreenImage("assets/images/blueprints1.png"),
               ),
             );
           },
@@ -1083,7 +1083,7 @@ class UnrealContentState extends State<UnrealContent>
               context,
               MaterialPageRoute(
                 builder: (context) =>
-                    FullScreenImage("assets/images/blueprints2.png"),
+                    const FullScreenImage("assets/images/blueprints2.png"),
               ),
             );
           },
@@ -1127,14 +1127,14 @@ class UnrealContentState extends State<UnrealContent>
               height: 20,
             ),
             FloatingActionButton.extended(
-              backgroundColor: Color(0xff6e5494),
+              backgroundColor: const Color(0xff6e5494),
               label: Text(
                 "GitHub",
                 style: GoogleFonts.interTight(
                   textStyle: Theme.of(context).textTheme.displayLarge,
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
-                  color: Color(0xfffafafa),
+                  color: const Color(0xfffafafa),
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -1491,7 +1491,7 @@ class BSIDevContentState extends State<BSIDevContent>
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Container(
-              constraints: BoxConstraints(
+              constraints: const BoxConstraints(
                 maxWidth: 400,
               ),
               clipBehavior: Clip.hardEdge,
@@ -1550,7 +1550,7 @@ class BSIDevContentState extends State<BSIDevContent>
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Container(
-              constraints: BoxConstraints(
+              constraints: const BoxConstraints(
                 maxWidth: 400,
               ),
               clipBehavior: Clip.hardEdge,
@@ -1593,7 +1593,7 @@ class BSIDevContentState extends State<BSIDevContent>
           height: 20,
         ),
         widget.mobile
-            ? MobileSwap(
+            ? const MobileSwap(
                 youtubeLink: "https://youtu.be/Irt-k8kTxe4",
                 imagePath: "assets/images/videoCovers/SpeedTour.png",
                 vertical: true,
@@ -1648,7 +1648,7 @@ class BSIDevContentState extends State<BSIDevContent>
           height: 20,
         ),
         widget.mobile
-            ? MobileSwap(
+            ? const MobileSwap(
                 youtubeLink: "https://youtu.be/q2LVQvYl_S8",
                 imagePath: "assets/images/videoCovers/BSIResponsive.png",
                 vertical: false,
@@ -1703,7 +1703,7 @@ class BSIDevContentState extends State<BSIDevContent>
           height: 20,
         ),
         widget.mobile
-            ? MobileSwap(
+            ? const MobileSwap(
                 youtubeLink: "https://youtu.be/b4oC9aBOTXU",
                 imagePath: "assets/images/videoCovers/BSIDashboard.png",
                 vertical: false,
@@ -1806,7 +1806,7 @@ class _DrawingsContentState extends State<DrawingsContent> {
             padding: const EdgeInsets.all(20.0),
             child: Container(
               clipBehavior: Clip.hardEdge,
-              constraints: BoxConstraints(
+              constraints: const BoxConstraints(
                 maxWidth: 400,
               ),
               decoration: BoxDecoration(
@@ -1834,7 +1834,7 @@ class _DrawingsContentState extends State<DrawingsContent> {
             padding: const EdgeInsets.all(20.0),
             child: Container(
               clipBehavior: Clip.hardEdge,
-              constraints: BoxConstraints(
+              constraints: const BoxConstraints(
                 maxWidth: 400,
               ),
               decoration: BoxDecoration(
@@ -1913,7 +1913,7 @@ class ModelVideoContentState extends State<ModelVideoContent>
             height: 20,
           ),
           widget.mobile
-              ? MobileSwap(
+              ? const MobileSwap(
                   youtubeLink:
                       "https://youtube.com/shorts/RHfPbcMsx1Q?feature=share",
                   imagePath: "assets/images/videoCovers/BallDropModel.png",
@@ -1953,7 +1953,7 @@ class ModelVideoContentState extends State<ModelVideoContent>
             height: 20,
           ),
           widget.mobile
-              ? MobileSwap(
+              ? const MobileSwap(
                   youtubeLink: "https://youtu.be/ZBtIcdt92lc",
                   imagePath: "assets/images/videoCovers/RobotWalking.png",
                   vertical: false,
@@ -1992,7 +1992,7 @@ class ModelVideoContentState extends State<ModelVideoContent>
             height: 20,
           ),
           widget.mobile
-              ? MobileSwap(
+              ? const MobileSwap(
                   youtubeLink: "https://youtu.be/1cRI-09-5vE",
                   imagePath: "assets/images/videoCovers/TruckModel.PNG",
                   vertical: false,
@@ -2108,7 +2108,7 @@ class _GalleryContentState extends State<GalleryContent> {
               padding: const EdgeInsets.all(20.0),
               child: Container(
                 clipBehavior: Clip.hardEdge,
-                constraints: BoxConstraints(
+                constraints: const BoxConstraints(
                   maxWidth: 400,
                 ),
                 decoration: BoxDecoration(
@@ -2149,7 +2149,7 @@ class _GalleryContentState extends State<GalleryContent> {
               padding: const EdgeInsets.all(20.0),
               child: Container(
                 clipBehavior: Clip.hardEdge,
-                constraints: BoxConstraints(
+                constraints: const BoxConstraints(
                   maxWidth: 400,
                 ),
                 decoration: BoxDecoration(
@@ -2200,7 +2200,7 @@ class _GalleryContentState extends State<GalleryContent> {
             padding: const EdgeInsets.all(20.0),
             child: Container(
               clipBehavior: Clip.hardEdge,
-              constraints: BoxConstraints(
+              constraints: const BoxConstraints(
                 maxWidth: 400,
               ),
               decoration: BoxDecoration(
@@ -2228,7 +2228,7 @@ class _GalleryContentState extends State<GalleryContent> {
             padding: const EdgeInsets.all(20.0),
             child: Container(
               clipBehavior: Clip.hardEdge,
-              constraints: BoxConstraints(
+              constraints: const BoxConstraints(
                 maxWidth: 400,
               ),
               decoration: BoxDecoration(
@@ -2274,7 +2274,7 @@ class _GalleryContentState extends State<GalleryContent> {
             height: 7,
           ),
           widget.mobile
-              ? MobileSwap(
+              ? const MobileSwap(
                   youtubeLink:
                       "https://youtube.com/shorts/RHfPbcMsx1Q?feature=share",
                   imagePath: "assets/images/videoCovers/BallDropModel.png",
@@ -2314,7 +2314,7 @@ class _GalleryContentState extends State<GalleryContent> {
             height: 20,
           ),
           widget.mobile
-              ? MobileSwap(
+              ? const MobileSwap(
                   youtubeLink: "https://youtu.be/ZBtIcdt92lc",
                   imagePath: "assets/images/videoCovers/RobotWalking.png",
                   vertical: false,
@@ -2353,7 +2353,7 @@ class _GalleryContentState extends State<GalleryContent> {
             height: 20,
           ),
           widget.mobile
-              ? MobileSwap(
+              ? const MobileSwap(
                   youtubeLink: "https://youtu.be/1cRI-09-5vE",
                   imagePath: "assets/images/videoCovers/TruckModel.PNG",
                   vertical: false,
@@ -2468,7 +2468,7 @@ class _AboutContentState extends State<AboutContent> {
               padding: const EdgeInsets.all(20.0),
               child: Container(
                 clipBehavior: Clip.hardEdge,
-                constraints: BoxConstraints(
+                constraints: const BoxConstraints(
                   maxWidth: 400,
                 ),
                 decoration: BoxDecoration(
@@ -2590,7 +2590,7 @@ class _AboutPortfolioContentState extends State<AboutPortfolioContent> {
               padding: const EdgeInsets.all(20.0),
               child: Container(
                 clipBehavior: Clip.hardEdge,
-                constraints: BoxConstraints(
+                constraints: const BoxConstraints(
                   maxWidth: 400,
                 ),
                 decoration: BoxDecoration(
@@ -2649,7 +2649,7 @@ class _AboutPortfolioContentState extends State<AboutPortfolioContent> {
               padding: const EdgeInsets.all(20.0),
               child: Container(
                 clipBehavior: Clip.hardEdge,
-                constraints: BoxConstraints(
+                constraints: const BoxConstraints(
                   maxWidth: 400,
                 ),
                 decoration: BoxDecoration(
@@ -2707,7 +2707,7 @@ class _AboutPortfolioContentState extends State<AboutPortfolioContent> {
                 height: 20,
               ),
               FloatingActionButton.extended(
-                backgroundColor: Color(0xff6e5494),
+                backgroundColor: const Color(0xff6e5494),
                 label: Text(
                   "GitHub",
                   style: GoogleFonts.interTight(
@@ -2780,7 +2780,7 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
           height: 20,
         ),
         widget.mobile
-            ? MobileSwap(
+            ? const MobileSwap(
                 youtubeLink: "https://www.youtube.com/watch?v=wPDQrEsVuAw",
                 imagePath: "assets/images/Hanger18/homeScreen.png",
                 vertical: true,
@@ -2909,7 +2909,7 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
           padding: const EdgeInsets.all(20.0),
           child: Container(
             clipBehavior: Clip.hardEdge,
-            constraints: BoxConstraints(
+            constraints: const BoxConstraints(
               maxWidth: 400,
             ),
             decoration: BoxDecoration(
@@ -2969,7 +2969,7 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
             padding: const EdgeInsets.all(20.0),
             child: Container(
               clipBehavior: Clip.hardEdge,
-              constraints: BoxConstraints(
+              constraints: const BoxConstraints(
                 maxWidth: 400,
               ),
               decoration: BoxDecoration(
@@ -3015,14 +3015,14 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
                     height: 20,
                   ),
                   FloatingActionButton.extended(
-                    backgroundColor: Color(0xff6e5494),
+                    backgroundColor: const Color(0xff6e5494),
                     label: Text(
                       "GitHub",
                       style: GoogleFonts.interTight(
                         textStyle: Theme.of(context).textTheme.displayLarge,
                         fontSize: 20,
                         fontWeight: FontWeight.w600,
-                        color: Color(0xfffafafa),
+                        color: const Color(0xfffafafa),
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -3087,7 +3087,7 @@ class ClimbingAppDesignContentState extends State<ClimbingAppDesignContent>
           height: 20,
         ),
         widget.mobile
-            ? MobileSwap(
+            ? const MobileSwap(
                 youtubeLink:
                     "https://youtube.com/shorts/VyNX46fG0c4?feature=share",
                 imagePath: "assets/images/Hanger18/dropDown.PNG",
@@ -3170,7 +3170,7 @@ class ClimbingAppDesignContentState extends State<ClimbingAppDesignContent>
               context,
               MaterialPageRoute(
                 builder: (context) =>
-                    FullScreenImage("assets/images/Hanger18/IMG_2512.PNG"),
+                    const FullScreenImage("assets/images/Hanger18/IMG_2512.PNG"),
               ),
             );
           },
@@ -3208,7 +3208,7 @@ class ClimbingAppDesignContentState extends State<ClimbingAppDesignContent>
               context,
               MaterialPageRoute(
                 builder: (context) =>
-                    FullScreenImage("assets/images/Hanger18/IMG_2495.jpg"),
+                    const FullScreenImage("assets/images/Hanger18/IMG_2495.jpg"),
               ),
             );
           },
@@ -3294,14 +3294,14 @@ class ClimbingAppDesignContentState extends State<ClimbingAppDesignContent>
                     height: 20,
                   ),
                   FloatingActionButton.extended(
-                    backgroundColor: Color(0xff6e5494),
+                    backgroundColor: const Color(0xff6e5494),
                     label: Text(
                       "GitHub",
                       style: GoogleFonts.interTight(
                         textStyle: Theme.of(context).textTheme.displayLarge,
                         fontSize: 20,
                         fontWeight: FontWeight.w600,
-                        color: Color(0xfffafafa),
+                        color: const Color(0xfffafafa),
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -3375,7 +3375,7 @@ class ReviewBookDesignContentState extends State<ReviewBookDesignContent>
               context,
               MaterialPageRoute(
                 builder: (context) =>
-                    FullScreenImage("assets/images/ReviewBookDesign.png"),
+                    const FullScreenImage("assets/images/ReviewBookDesign.png"),
               ),
             );
           },
@@ -3450,7 +3450,7 @@ class ReviewBookDesignContentState extends State<ReviewBookDesignContent>
               context,
               MaterialPageRoute(
                 builder: (context) =>
-                    FullScreenImage("assets/images/ShiftAppDesign.png"),
+                    const FullScreenImage("assets/images/ShiftAppDesign.png"),
               ),
             );
           },

@@ -87,6 +87,8 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   GlobalKey<ControllerWidgetState> controllerKey =
       GlobalKey<ControllerWidgetState>();
 
+  final FocusNode _focusNode = FocusNode();
+
   Future<void> _loadRiveFile() async {
     List<String> artboardNames = [
       'ControllerBackground',
@@ -161,7 +163,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-
+    _focusNode.requestFocus();
     simulateLoading();
     //initPlanets();
     _animController = AnimationController(
@@ -279,6 +281,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   void dispose() {
     _controller.dispose();
     _animController.dispose();
+    _focusNode.dispose();
     super.dispose();
   }
 
@@ -719,9 +722,12 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return complete
-        ? RawKeyboardListener(
-            focusNode: FocusNode(),
-            onKey: _handleKeyEvent,
+        ? Focus(
+            focusNode: _focusNode,
+            onKeyEvent: (FocusNode node, KeyEvent event) {
+              _handleKeyEvent(event);
+              return KeyEventResult.handled;
+            },
             child: Scaffold(
               body: Builder(
                 builder: (context) {
@@ -1206,17 +1212,16 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   final List<String> _pressedDirections = [];
 
   // A method to handle the key events
-  void _handleKeyEvent(RawKeyEvent event) {
+  void _handleKeyEvent(KeyEvent event) {
     // Get the key code of the event
     final int keyCode = event.logicalKey.keyId;
-
     // Check if the key code is in the map
     if (_keyMap.containsKey(keyCode)) {
       // Get the direction of the key code
       final String direction = _keyMap[keyCode]!;
 
       // Check if the event is a key down event
-      if (event is RawKeyDownEvent) {
+      if (event is KeyDownEvent) {
         // Check if the direction is not already in the list
         if (!_pressedDirections.contains(direction)) {
           // Add the direction to the list
@@ -1233,6 +1238,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 toggleContentPoint();
               }
             } else if (direction == 'Left') {
+              print("Left");
               playSound("button");
               if (!atPlanet) {
                 playSound("sounds/MoveToSideClip.mp3");
@@ -1277,6 +1283,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 curPoint = 0;
               }
             } else if (direction == 'Right') {
+              print("Right");
               playSound("button");
               if (!atPlanet) {
                 widget.curPlanet++;
@@ -1340,7 +1347,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       }
 
       // Check if the event is a key up event
-      if (event is RawKeyUpEvent) {
+      if (event is KeyUpEvent) {
         // Check if the direction is in the list
         if (_pressedDirections.contains(direction)) {
           // Remove the direction from the list

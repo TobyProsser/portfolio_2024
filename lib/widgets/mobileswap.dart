@@ -5,7 +5,7 @@ import '../screens/fullscreenimage.dart';
 import 'dart:html' as html;
 
 class MobileSwap extends StatefulWidget {
-  MobileSwap(
+  const MobileSwap(
       {super.key,
       required this.youtubeLink,
       required this.imagePath,
@@ -92,7 +92,7 @@ class _MobileSwapState extends State<MobileSwap> {
                   ),
           ),
         ),
-        SizedBox(height: 15),
+        const SizedBox(height: 15),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(

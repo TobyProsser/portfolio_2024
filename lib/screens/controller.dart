@@ -688,7 +688,7 @@ class ControllerWidgetState extends State<ControllerWidget>
       final String direction = _keyMap[keyCode]!;
 
       // Check if the event is a key down event
-      if (event is RawKeyDownEvent) {
+      if (event is KeyDownEvent) {
         if (inputCount <= 6) {
           if (direction == 'Up') {
             tutorial("up");

@@ -695,19 +695,23 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     // Create an AudioPlayer instance
     final player = justAudio.AudioPlayer();
+    final buttonPlayer = justAudio.AudioPlayer();
     // Define a function to play the mp3 file from assets
     Future<void> playSound(String sound) async {
       // Stop any previous sound
       //await player.stop();
+      print("play Sound: " + sound);
       if (sound == "button") {
         if (_isSound1) {
           // Play the first sound
-          await player.setFilePath("assets/sounds/Select1.wav");
-          player.play();
+          await buttonPlayer.setFilePath("assets/sounds/Select1.wav");
+          buttonPlayer.play();
+          print("Sound 1");
         } else {
           // Play the second sound
-          await player.setFilePath("assets/sounds/Select2.wav");
-          player.play();
+          await buttonPlayer.setFilePath("assets/sounds/Select2.wav");
+          buttonPlayer.play();
+          print("Sound 2");
         }
 
         setState(() {
@@ -717,6 +721,8 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         await player.setFilePath(sound);
         player.play();
       }
+
+      print("Sound Played");
     }
 
     double width = MediaQuery.of(context).size.width;

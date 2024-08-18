@@ -355,16 +355,18 @@ class ControllerWidgetState extends State<ControllerWidget>
                   child: LayoutBuilder(
                     builder: (context, constraints) => Stack(
                       children: [
-                        SizedBox(
-                          width: constraints.maxWidth,
-                          height: constraints.maxHeight,
-                          child: Rive(
-                            artboard: artBoards[7],
-                            alignment: Alignment.center,
-                            fit: BoxFit.cover,
-                            useArtboardSize: true,
-                          ),
-                        ),
+                        artBoards.length <= 7
+                            ? CircularProgressIndicator()
+                            : SizedBox(
+                                width: constraints.maxWidth,
+                                height: constraints.maxHeight,
+                                child: Rive(
+                                  artboard: artBoards[7],
+                                  alignment: Alignment.center,
+                                  fit: BoxFit.cover,
+                                  useArtboardSize: true,
+                                ),
+                              ),
                         Align(
                           //Left Arrow
                           alignment: const FractionalOffset(0.05, 0.5),

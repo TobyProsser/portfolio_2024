@@ -1235,6 +1235,7 @@ class _BsiAboutContentState extends State<BsiAboutContent> {
             child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: Container(
+                width: 300,
                 clipBehavior: Clip.hardEdge,
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(
@@ -1277,6 +1278,7 @@ class _BsiAboutContentState extends State<BsiAboutContent> {
             child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: Container(
+                width: 300,
                 clipBehavior: Clip.hardEdge,
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(
@@ -1319,6 +1321,7 @@ class _BsiAboutContentState extends State<BsiAboutContent> {
             child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: Container(
+                width: 300,
                 clipBehavior: Clip.hardEdge,
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(
@@ -1361,6 +1364,7 @@ class _BsiAboutContentState extends State<BsiAboutContent> {
             child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: Container(
+                width: 300,
                 clipBehavior: Clip.hardEdge,
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(
@@ -1403,6 +1407,7 @@ class _BsiAboutContentState extends State<BsiAboutContent> {
             child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: Container(
+                width: 300,
                 clipBehavior: Clip.hardEdge,
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(
@@ -1546,7 +1551,7 @@ class BSIDevContentState extends State<BSIDevContent>
               child: DisplayImage(
                 imagePath: "assets/images/BSIDev/BSIDEV1.png",
                 width: 300,
-                height: 175,
+                height: 200,
               ),
             ),
           ),
@@ -1609,7 +1614,7 @@ class BSIDevContentState extends State<BSIDevContent>
               child: DisplayImage(
                 imagePath: "assets/images/BSIDev/BSIDEV2.png",
                 width: 300,
-                height: 175,
+                height: 200,
               ),
             ),
           ),
@@ -2155,7 +2160,7 @@ class _GalleryContentState extends State<GalleryContent> {
               child: Container(
                 clipBehavior: Clip.hardEdge,
                 constraints: const BoxConstraints(
-                  maxWidth: 400,
+                  maxWidth: 175,
                 ),
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(
@@ -2200,7 +2205,7 @@ class _GalleryContentState extends State<GalleryContent> {
               child: Container(
                 clipBehavior: Clip.hardEdge,
                 constraints: const BoxConstraints(
-                  maxWidth: 400,
+                  maxWidth: 175,
                 ),
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(
@@ -2531,7 +2536,7 @@ class _AboutContentState extends State<AboutContent> {
               child: Container(
                 clipBehavior: Clip.hardEdge,
                 constraints: const BoxConstraints(
-                  maxWidth: 400,
+                  maxWidth: 210,
                 ),
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(
@@ -2551,7 +2556,7 @@ class _AboutContentState extends State<AboutContent> {
                 ),
                 child: DisplayImage(
                   imagePath: "assets/images/ResumeImage.png",
-                  width: 175,
+                  width: 210,
                   height: 300,
                 ),
               ),
@@ -2657,7 +2662,7 @@ class _AboutPortfolioContentState extends State<AboutPortfolioContent> {
               child: Container(
                 clipBehavior: Clip.hardEdge,
                 constraints: const BoxConstraints(
-                  maxWidth: 400,
+                  maxWidth: 300,
                 ),
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(
@@ -2676,9 +2681,9 @@ class _AboutPortfolioContentState extends State<AboutPortfolioContent> {
                   ],
                 ),
                 child: DisplayImage(
-                  imagePath: "assets/images/PortfolioDev/RiveSS1.JPG",
+                  imagePath: "assets/images/RiveSS1.JPG",
                   width: 300,
-                  height: 175,
+                  height: 300,
                 ),
               ),
             ),
@@ -2710,8 +2715,8 @@ class _AboutPortfolioContentState extends State<AboutPortfolioContent> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const FullScreenImage(
-                      "assets/images/PortfolioDev/RiveSS2.JPG"),
+                  builder: (context) =>
+                      const FullScreenImage("assets/images/RiveSS2.JPG"),
                 ),
               );
             },
@@ -2739,7 +2744,7 @@ class _AboutPortfolioContentState extends State<AboutPortfolioContent> {
                   ],
                 ),
                 child: DisplayImage(
-                  imagePath: "assets/images/PortfolioDev/RiveSS2.JPG",
+                  imagePath: "assets/images/RiveSS2.JPG",
                   width: 300,
                   height: 175,
                 ),
@@ -2984,7 +2989,7 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
           child: Container(
             clipBehavior: Clip.hardEdge,
             constraints: const BoxConstraints(
-              maxWidth: 400,
+              maxWidth: 220,
             ),
             decoration: BoxDecoration(
               color: const Color.fromARGB(
@@ -3003,7 +3008,7 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
             ),
             child: DisplayImage(
               imagePath: "assets/images/Hanger18/Hanger18Letter.png",
-              width: 175,
+              width: 220,
               height: 300,
             ),
           ),
@@ -3048,7 +3053,7 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
             child: Container(
               clipBehavior: Clip.hardEdge,
               constraints: const BoxConstraints(
-                maxWidth: 400,
+                maxWidth: 220,
               ),
               decoration: BoxDecoration(
                 color: const Color.fromARGB(
@@ -3067,7 +3072,7 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
               ),
               child: DisplayImage(
                 imagePath: "assets/images/ClimberLBPoster.png",
-                width: 225,
+                width: 220,
                 height: 300,
               ),
             ),
@@ -3259,7 +3264,7 @@ class ClimbingAppDesignContentState extends State<ClimbingAppDesignContent>
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Container(
-              height: 400,
+              width: 200,
               clipBehavior: Clip.hardEdge,
               decoration: BoxDecoration(
                 color: const Color.fromARGB(
@@ -3278,8 +3283,8 @@ class ClimbingAppDesignContentState extends State<ClimbingAppDesignContent>
               ),
               child: DisplayImage(
                 imagePath: "assets/images/Hanger18/IMG_2512.PNG",
-                width: 150,
-                height: 350,
+                width: 200,
+                height: 400,
               ),
             ),
           ),
@@ -3302,6 +3307,7 @@ class ClimbingAppDesignContentState extends State<ClimbingAppDesignContent>
             padding: const EdgeInsets.all(20.0),
             child: Container(
               height: 400,
+              width: 200,
               clipBehavior: Clip.hardEdge,
               decoration: BoxDecoration(
                 color: const Color.fromARGB(
@@ -3320,8 +3326,8 @@ class ClimbingAppDesignContentState extends State<ClimbingAppDesignContent>
               ),
               child: DisplayImage(
                 imagePath: "assets/images/Hanger18/IMG_2495.jpg",
-                width: 150,
-                height: 350,
+                width: 200,
+                height: 400,
               ),
             ),
           ),
@@ -3472,7 +3478,7 @@ class ReviewBookDesignContentState extends State<ReviewBookDesignContent>
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Container(
-              width: 400,
+              width: 300,
               clipBehavior: Clip.hardEdge,
               decoration: BoxDecoration(
                 color: const Color.fromARGB(
@@ -3491,8 +3497,8 @@ class ReviewBookDesignContentState extends State<ReviewBookDesignContent>
               ),
               child: DisplayImage(
                 imagePath: "assets/images/ReviewBookDesign.png",
-                width: 175,
-                height: 300,
+                width: 300,
+                height: 430,
               ),
             ),
           ),
@@ -3551,7 +3557,7 @@ class ReviewBookDesignContentState extends State<ReviewBookDesignContent>
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Container(
-              width: 400,
+              width: 250,
               clipBehavior: Clip.hardEdge,
               decoration: BoxDecoration(
                 color: const Color.fromARGB(
@@ -3570,7 +3576,7 @@ class ReviewBookDesignContentState extends State<ReviewBookDesignContent>
               ),
               child: const DisplayImage(
                 imagePath: "assets/images/ShiftAppDesign.png",
-                width: 175,
+                width: 250,
                 height: 300,
               ),
             ),

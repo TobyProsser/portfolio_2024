@@ -1,12 +1,12 @@
 import 'dart:async';
 
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:just_audio/just_audio.dart';
 import 'package:rive/rive.dart';
-// ignore: library_prefixes
-import 'package:just_audio/just_audio.dart' as justAudio;
 
 import '../widgets/content.dart';
 import '../widgets/planet.dart';
@@ -64,7 +64,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   late List<Artboard> artBoards = [];
   late bool complete = false;
 
-  //final audioPlayer = AudioPlayer();
+  late AudioPlayer _audioPlayer;
 
   final List<double> planetPosX = [.15, .45, .67, .86];
   final List<double> planetPosY = [.1, .35, .1, .43];
@@ -72,7 +72,6 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   double planesX = .5;
   double planesY = .65;
 
-  late StateMachineController _controller;
   late StateMachineController _starscontroller;
   late StateMachineController _shootingStarcontroller;
 
@@ -82,7 +81,6 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   SMIBool? fireBool;
   SMIBool? shootingStarTrigger;
   late StateMachineController _fireController;
-  late StateMachineController _flagController;
 
   GlobalKey<ControllerWidgetState> controllerKey =
       GlobalKey<ControllerWidgetState>();
@@ -91,23 +89,10 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   Future<void> _loadRiveFile() async {
     List<String> artboardNames = [
-      'ControllerBackground',
-      'ControllerDpad',
-      'ControllerButton',
-      'HomeButton',
-      'Grills',
       'Plane',
-      'Planet',
-      'ControllerFull',
-      'Scanner',
-      'ScannerScreen',
       'LazerFlash',
-      'Planet1',
-      'Planet2',
-      'Planet3',
       'Stars',
       'Screen',
-      'Flag',
       'ShootingStar',
       'Horizontal_Stars',
     ];
@@ -120,35 +105,24 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         artBoards.add(artBoard!);
       });
     }
-    _controller = StateMachineController.fromArtboard(
-      artBoards[7],
-      'ControllerStateMachine',
-    )!;
-    artBoards[7].addController(_controller);
 
     _starscontroller = StateMachineController.fromArtboard(
-      artBoards[14],
+      artBoards[2],
       'StarStateMachine',
     )!;
-    artBoards[14].addController(_starscontroller);
+    artBoards[2].addController(_starscontroller);
 
     _fireController = StateMachineController.fromArtboard(
-      artBoards[10],
+      artBoards[1],
       'St_Machine',
     )!;
-    artBoards[10].addController(_fireController);
-
-    _flagController = StateMachineController.fromArtboard(
-      artBoards[16],
-      'FlagMachine',
-    )!;
-    artBoards[16].addController(_flagController);
+    artBoards[1].addController(_fireController);
 
     _shootingStarcontroller = StateMachineController.fromArtboard(
-      artBoards[17],
+      artBoards[4],
       'State Machine 1',
     )!;
-    artBoards[17].addController(_shootingStarcontroller);
+    artBoards[4].addController(_shootingStarcontroller);
 
     fireBool = _fireController.findInput<bool>('Fire') as SMIBool;
 
@@ -163,6 +137,8 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
+
+    _audioPlayer = AudioPlayer();
     _focusNode.requestFocus();
     simulateLoading();
     //initPlanets();
@@ -279,7 +255,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   @override
   void dispose() {
-    _controller.dispose();
+    _audioPlayer.dispose();
     _animController.dispose();
     _focusNode.dispose();
     super.dispose();
@@ -642,34 +618,37 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   // Define a boolean variable to track the current sound
   bool _isSound1 = true;
 
-  final player = justAudio.AudioPlayer();
+  Future<String> getAudioDownloadURL(String fileName) async {
+    Reference storageRef = FirebaseStorage.instance.ref().child(fileName);
+    String downloadURL = await storageRef.getDownloadURL();
+    return downloadURL;
+  }
 
   Future<void> playSound(String sound) async {
-    // Stop any previous sound
-    await player.stop();
-    if (sound == "button") {
-      if (_isSound1) {
-        // Play the first sound
-        await player.setFilePath("assets/sounds/Select1.wav");
-        player.play();
-        // await player.play(AssetSource('sounds/Select1.wav'),
-        //     mode: PlayerMode.lowLatency, volume: 100);
-      } else {
-        // Play the second sound
-        await player.setFilePath("assets/sounds/Select2.wav");
-        player.play();
-        // await player.play(AssetSource('sounds/Select2.wav'),
-        //     mode: PlayerMode.lowLatency, volume: 100);
-      }
+    try {
+      if (sound == "button") {
+        if (_isSound1) {
+          String url1 = await getAudioDownloadURL("Select1.wav");
+          // Play the first sound
+          await _audioPlayer.setUrl(url1);
+          _audioPlayer.play();
+        } else {
+          String url1 = await getAudioDownloadURL("assets/sounds/Select2.wav");
+          // Play the second sound
+          await _audioPlayer.setUrl(url1);
+          _audioPlayer.play();
+        }
 
-      setState(() {
-        _isSound1 = !_isSound1;
-      });
-    } else {
-      await player.setFilePath(sound);
-      player.play();
-      // await player.play(AssetSource(sound),
-      //     mode: PlayerMode.lowLatency, volume: 100);
+        setState(() {
+          _isSound1 = !_isSound1;
+        });
+      } else {
+        String url = await getAudioDownloadURL(sound);
+        await _audioPlayer.setFilePath(url);
+        _audioPlayer.play();
+      }
+    } catch (e) {
+      print('Error playing audio: $e');
     }
   }
 
@@ -684,6 +663,8 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       setState(() {
         progress = i;
       });
+
+      print("Loader: " + i.toString());
     }
     // Set the loading status to false
     setState(() {
@@ -693,38 +674,6 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    // Create an AudioPlayer instance
-    final player = justAudio.AudioPlayer();
-    final buttonPlayer = justAudio.AudioPlayer();
-    // Define a function to play the mp3 file from assets
-    Future<void> playSound(String sound) async {
-      // Stop any previous sound
-      //await player.stop();
-      print("play Sound: " + sound);
-      if (sound == "button") {
-        if (_isSound1) {
-          // Play the first sound
-          await buttonPlayer.setFilePath("assets/sounds/Select1.wav");
-          buttonPlayer.play();
-          print("Sound 1");
-        } else {
-          // Play the second sound
-          await buttonPlayer.setFilePath("assets/sounds/Select2.wav");
-          buttonPlayer.play();
-          print("Sound 2");
-        }
-
-        setState(() {
-          _isSound1 = !_isSound1;
-        });
-      } else {
-        await player.setFilePath(sound);
-        player.play();
-      }
-
-      print("Sound Played");
-    }
-
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return complete
@@ -753,9 +702,8 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         child: Transform.rotate(
                           angle: width > height ? 110 : 0,
                           child: Rive(
-                              artboard: width < height
-                                  ? artBoards[14]
-                                  : artBoards[18],
+                              artboard:
+                                  width < height ? artBoards[2] : artBoards[5],
                               alignment: Alignment.center,
                               useArtboardSize: false,
                               fit: BoxFit.fill),
@@ -769,7 +717,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           child: Transform.rotate(
                             angle: shootingStarRotaiton,
                             child: Rive(
-                              artboard: artBoards[17],
+                              artboard: artBoards[4],
                               alignment: Alignment.topRight,
                               useArtboardSize: false,
                             ),
@@ -964,7 +912,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                   child: FractionallySizedBox(
                                     heightFactor: .45,
                                     child: Rive(
-                                      artboard: artBoards[10],
+                                      artboard: artBoards[1],
                                       alignment: Alignment.topRight,
                                       useArtboardSize: true,
                                     ),
@@ -975,7 +923,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                   child: FractionallySizedBox(
                                     heightFactor: .55,
                                     child: Rive(
-                                      artboard: artBoards[5],
+                                      artboard: artBoards[0],
                                       alignment: Alignment.bottomCenter,
                                       useArtboardSize: true,
                                     ),
@@ -993,7 +941,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         child: FractionallySizedBox(
                           widthFactor: 1,
                           child: Rive(
-                              artboard: artBoards[15],
+                              artboard: artBoards[3],
                               alignment: Alignment.center,
                               useArtboardSize: false,
                               fit: BoxFit.fill),

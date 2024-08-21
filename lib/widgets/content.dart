@@ -7,6 +7,7 @@ import 'package:portfolio_2024/widgets/simpleHtmlYoutubeIframe.dart';
 //import 'package:pdfx/pdfx.dart';
 
 import '../screens/fullscreenimage.dart';
+import 'displayimage.dart';
 
 // ignore: must_be_immutable
 class UnityContent extends StatefulWidget {
@@ -793,7 +794,11 @@ class UnrealContentState extends State<UnrealContent>
                   ),
                 ],
               ),
-              child: Image.asset("assets/images/ArcMastermindText1.png"),
+              child: DisplayImage(
+                imagePath: "assets/images/ArcMastermindText1.png",
+                width: 300,
+                height: 175,
+              ),
             ),
           ),
         ),
@@ -1072,7 +1077,11 @@ class UnrealContentState extends State<UnrealContent>
                   ),
                 ],
               ),
-              child: Image.asset('assets/images/blueprints1.png'),
+              child: DisplayImage(
+                imagePath: "assets/images/blueprints1.png",
+                width: 300,
+                height: 175,
+              ),
             ),
           ),
         ),
@@ -1107,7 +1116,11 @@ class UnrealContentState extends State<UnrealContent>
                   ),
                 ],
               ),
-              child: Image.asset("assets/images/blueprints2.png"),
+              child: DisplayImage(
+                imagePath: "assets/images/blueprints2.png",
+                width: 300,
+                height: 175,
+              ),
             ),
           ),
         ),
@@ -1239,7 +1252,11 @@ class _BsiAboutContentState extends State<BsiAboutContent> {
                     ),
                   ],
                 ),
-                child: Image.asset("assets/images/BSIInfo/Slide1.jpg"),
+                child: DisplayImage(
+                  imagePath: "assets/images/BSIInfo/Slide1.jpg",
+                  width: 300,
+                  height: 175,
+                ),
               ),
             ),
           ),
@@ -1277,7 +1294,11 @@ class _BsiAboutContentState extends State<BsiAboutContent> {
                     ),
                   ],
                 ),
-                child: Image.asset("assets/images/BSIInfo/Slide2.jpg"),
+                child: DisplayImage(
+                  imagePath: "assets/images/BSIInfo/Slide2.jpg",
+                  width: 300,
+                  height: 175,
+                ),
               ),
             ),
           ),
@@ -1315,7 +1336,11 @@ class _BsiAboutContentState extends State<BsiAboutContent> {
                     ),
                   ],
                 ),
-                child: Image.asset("assets/images/BSIInfo/Slide3.PNG"),
+                child: DisplayImage(
+                  imagePath: "assets/images/BSIInfo/Slide3.PNG",
+                  width: 300,
+                  height: 175,
+                ),
               ),
             ),
           ),
@@ -1353,7 +1378,11 @@ class _BsiAboutContentState extends State<BsiAboutContent> {
                     ),
                   ],
                 ),
-                child: Image.asset("assets/images/BSIInfo/Slide4.PNG"),
+                child: DisplayImage(
+                  imagePath: "assets/images/BSIInfo/Slide4.PNG",
+                  width: 300,
+                  height: 175,
+                ),
               ),
             ),
           ),
@@ -1391,7 +1420,11 @@ class _BsiAboutContentState extends State<BsiAboutContent> {
                     ),
                   ],
                 ),
-                child: Image.asset("assets/images/BSIInfo/Slide5.PNG"),
+                child: DisplayImage(
+                  imagePath: "assets/images/BSIInfo/Slide5.PNG",
+                  width: 300,
+                  height: 175,
+                ),
               ),
             ),
           ),
@@ -1510,7 +1543,11 @@ class BSIDevContentState extends State<BSIDevContent>
                   ),
                 ],
               ),
-              child: Image.asset("assets/images/BSIDev/BSIDEV1.png"),
+              child: DisplayImage(
+                imagePath: "assets/images/BSIDev/BSIDEV1.png",
+                width: 300,
+                height: 175,
+              ),
             ),
           ),
         ),
@@ -1569,7 +1606,11 @@ class BSIDevContentState extends State<BSIDevContent>
                   ),
                 ],
               ),
-              child: Image.asset("assets/images/BSIDev/BSIDEV2.png"),
+              child: DisplayImage(
+                imagePath: "assets/images/BSIDev/BSIDEV2.png",
+                width: 300,
+                height: 175,
+              ),
             ),
           ),
         ),
@@ -1824,7 +1865,11 @@ class _DrawingsContentState extends State<DrawingsContent> {
                   ),
                 ],
               ),
-              child: Image.asset("assets/images/ShellDrawing.jpeg"),
+              child: DisplayImage(
+                imagePath: "assets/images/ShellDrawing.jpeg",
+                width: 300,
+                height: 175,
+              ),
             ),
           ),
           const SizedBox(
@@ -1852,7 +1897,11 @@ class _DrawingsContentState extends State<DrawingsContent> {
                   ),
                 ],
               ),
-              child: Image.asset("assets/images/EyeDrawing.jpg"),
+              child: DisplayImage(
+                imagePath: "assets/images/EyeDrawing.jpg",
+                width: 300,
+                height: 175,
+              ),
             ),
           ),
           const SizedBox(
@@ -1900,9 +1949,6 @@ class ModelVideoContentState extends State<ModelVideoContent>
   void initState() {
     super.initState();
   }
-
-  @override
-  void dispose() {}
 
   @override
   Widget build(BuildContext context) {
@@ -2127,7 +2173,11 @@ class _GalleryContentState extends State<GalleryContent> {
                     ),
                   ],
                 ),
-                child: Image.asset("assets/images/GamesGallery1.png"),
+                child: DisplayImage(
+                  imagePath: "assets/images/GamesGallery1.png",
+                  width: 175,
+                  height: 300,
+                ),
               ),
             ),
           ),
@@ -2168,7 +2218,11 @@ class _GalleryContentState extends State<GalleryContent> {
                     ),
                   ],
                 ),
-                child: Image.asset("assets/images/GamesGallery2.png"),
+                child: DisplayImage(
+                  imagePath: "assets/images/GamesGallery2.png",
+                  width: 175,
+                  height: 300,
+                ),
               ),
             ),
           ),
@@ -2218,7 +2272,11 @@ class _GalleryContentState extends State<GalleryContent> {
                   ),
                 ],
               ),
-              child: Image.asset("assets/images/ShellDrawing.jpeg"),
+              child: DisplayImage(
+                imagePath: "assets/images/ShellDrawing.jpeg",
+                width: 300,
+                height: 175,
+              ),
             ),
           ),
           const SizedBox(
@@ -2246,7 +2304,11 @@ class _GalleryContentState extends State<GalleryContent> {
                   ),
                 ],
               ),
-              child: Image.asset("assets/images/EyeDrawing.jpg"),
+              child: DisplayImage(
+                imagePath: "assets/images/EyeDrawing.jpg",
+                width: 300,
+                height: 175,
+              ),
             ),
           ),
           const SizedBox(
@@ -2487,7 +2549,11 @@ class _AboutContentState extends State<AboutContent> {
                     ),
                   ],
                 ),
-                child: Image.asset("assets/images/ResumeImage.png"),
+                child: DisplayImage(
+                  imagePath: "assets/images/ResumeImage.png",
+                  width: 175,
+                  height: 300,
+                ),
               ),
             ),
           ),
@@ -2609,7 +2675,11 @@ class _AboutPortfolioContentState extends State<AboutPortfolioContent> {
                     ),
                   ],
                 ),
-                child: Image.asset("assets/images/PortfolioDev/RiveSS1.JPG"),
+                child: DisplayImage(
+                  imagePath: "assets/images/PortfolioDev/RiveSS1.JPG",
+                  width: 300,
+                  height: 175,
+                ),
               ),
             ),
           ),
@@ -2668,7 +2738,11 @@ class _AboutPortfolioContentState extends State<AboutPortfolioContent> {
                     ),
                   ],
                 ),
-                child: Image.asset("assets/images/PortfolioDev/RiveSS2.JPG"),
+                child: DisplayImage(
+                  imagePath: "assets/images/PortfolioDev/RiveSS2.JPG",
+                  width: 300,
+                  height: 175,
+                ),
               ),
             ),
           ),
@@ -2927,7 +3001,11 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
                 ),
               ],
             ),
-            child: Image.asset("assets/images/Hanger18/Hanger18Letter.png"),
+            child: DisplayImage(
+              imagePath: "assets/images/Hanger18/Hanger18Letter.png",
+              width: 175,
+              height: 300,
+            ),
           ),
         ),
         const SizedBox(
@@ -2987,7 +3065,11 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
                   ),
                 ],
               ),
-              child: Image.asset("assets/images/ClimberLBPoster.png"),
+              child: DisplayImage(
+                imagePath: "assets/images/ClimberLBPoster.png",
+                width: 225,
+                height: 300,
+              ),
             ),
           ),
         ),
@@ -3169,8 +3251,8 @@ class ClimbingAppDesignContentState extends State<ClimbingAppDesignContent>
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) =>
-                    const FullScreenImage("assets/images/Hanger18/IMG_2512.PNG"),
+                builder: (context) => const FullScreenImage(
+                    "assets/images/Hanger18/IMG_2512.PNG"),
               ),
             );
           },
@@ -3194,7 +3276,11 @@ class ClimbingAppDesignContentState extends State<ClimbingAppDesignContent>
                   ),
                 ],
               ),
-              child: Image.asset('assets/images/Hanger18/IMG_2512.PNG'),
+              child: DisplayImage(
+                imagePath: "assets/images/Hanger18/IMG_2512.PNG",
+                width: 150,
+                height: 350,
+              ),
             ),
           ),
         ),
@@ -3207,8 +3293,8 @@ class ClimbingAppDesignContentState extends State<ClimbingAppDesignContent>
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) =>
-                    const FullScreenImage("assets/images/Hanger18/IMG_2495.jpg"),
+                builder: (context) => const FullScreenImage(
+                    "assets/images/Hanger18/IMG_2495.jpg"),
               ),
             );
           },
@@ -3232,7 +3318,11 @@ class ClimbingAppDesignContentState extends State<ClimbingAppDesignContent>
                   ),
                 ],
               ),
-              child: Image.asset('assets/images/Hanger18/IMG_2495.jpg'),
+              child: DisplayImage(
+                imagePath: "assets/images/Hanger18/IMG_2495.jpg",
+                width: 150,
+                height: 350,
+              ),
             ),
           ),
         ),
@@ -3399,7 +3489,11 @@ class ReviewBookDesignContentState extends State<ReviewBookDesignContent>
                   ),
                 ],
               ),
-              child: Image.asset("assets/images/ReviewBookDesign.png"),
+              child: DisplayImage(
+                imagePath: "assets/images/ReviewBookDesign.png",
+                width: 175,
+                height: 300,
+              ),
             ),
           ),
         ),
@@ -3474,7 +3568,11 @@ class ReviewBookDesignContentState extends State<ReviewBookDesignContent>
                   ),
                 ],
               ),
-              child: Image.asset("assets/images/ShiftAppDesign.png"),
+              child: const DisplayImage(
+                imagePath: "assets/images/ShiftAppDesign.png",
+                width: 175,
+                height: 300,
+              ),
             ),
           ),
         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio_2024/widgets/displayimage.dart';
 
 import '../screens/fullscreenimage.dart';
 import 'dart:html' as html;
@@ -67,7 +68,11 @@ class _MobileSwapState extends State<MobileSwap> {
                         ),
                       ],
                     ),
-                    child: Image.asset(widget.imagePath),
+                    child: DisplayImage(
+                      imagePath: widget.imagePath,
+                      width: 175,
+                      height: 300,
+                    ),
                   )
                 : Container(
                     width: 400,
@@ -88,7 +93,11 @@ class _MobileSwapState extends State<MobileSwap> {
                         ),
                       ],
                     ),
-                    child: Image.asset(widget.imagePath),
+                    child: DisplayImage(
+                      imagePath: widget.imagePath,
+                      width: 300,
+                      height: 175,
+                    ),
                   ),
           ),
         ),

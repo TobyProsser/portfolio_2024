@@ -9,7 +9,8 @@ environment:
 dependencies:
   firebase_core: ^2.24.2
   flutter_widget_from_html_core: any
-  firebase_core_web: ^2.17.4
+  firebase_storage: ^11.6.0
+  cached_network_image: ^3.4.1
 
   flutter:
     sdk: flutter
@@ -17,14 +18,14 @@ dependencies:
   provider: ^6.1.1
   rive: ^0.12.3
   video_player: ^2.8.2
-  audioplayers: ^5.2.1
   google_fonts: ^6.1.0
-  just_audio: ^0.9.36
   photo_view: ^0.14.0
   cupertino_icons: ^1.0.6
   youtube_player_iframe: ^4.0.4
   fwfh_webview: ^0.14.8
-  audio_session: ^0.1.21
+  just_audio: ^0.9.36
+  url_launcher: ^6.3.0
+  image_network: ^2.5.6
 
 dev_dependencies:
   flutter_test:
@@ -36,57 +37,4 @@ flutter:
 
   assets:
     - assets/
-
-    - assets/sounds/
-    - assets/images/
-    - assets/images/PortfolioDev/
-    - assets/images/BSIInfo/
-    - assets/images/BSIDev/
-    - assets/images/Hanger18/
     - assets/portfoliocontrol.riv
-    - assets/images/SquareCardPattern.png
-    - assets/images/Stars.png
-    - assets/images/EyeDrawing.jpg
-    - assets/images/ShellDrawing.jpeg
-    - assets/images/Tiles1.png
-    - assets/images/Tiles2.png
-    - assets/images/blueprints1.png
-    - assets/images/blueprints2.png
-    - assets/images/ClimberLBPoster.png
-    - assets/images/Hanger18/IMG_2495.jpg
-    - assets/images/Hanger18/IMG_2512.PNG
-    - assets/images/Hanger18/Hanger18Letter.png
-
-    - assets/sounds/Select1.wav
-    - assets/sounds/Select2.wav
-    - assets/sounds/Laser.mp3
-    - assets/pdfs/ArcMastermind_EpicGrantApplication.pdf
-    - assets/images/ResumeImage.png
-    - assets/sounds/MoveToSideClip.mp3
-    - NewLaserClip.mp3
-    - assets/sounds/FutureToPlanetClip.mp3
-
-    - assets/images/GamesGallery1.png
-    - assets/images/GamesGallery2.png
-    - assets/images/BSIInfo/Slide1.jpg
-    - assets/images/BSIInfo/Slide2.jpg
-    - assets/images/BSIInfo/Slide3.PNG
-    - assets/images/BSIInfo/Slide4.PNG
-    - assets/images/BSIInfo/Slide5.PNG
-    - assets/images/PortfolioDev/RiveSS1.JPG
-    - assets/images/PortfolioDev/RiveSS2.JPG
-
-    - assets/images/videoCovers/ArcMastermind.png
-    - assets/images/videoCovers/BallDropModel.png
-    - assets/images/videoCovers/BSIDashboard.png
-    - assets/images/videoCovers/BSIResponsive.png
-    - assets/images/videoCovers/LofiIslandsCover.png
-    - assets/images/videoCovers/PlanetWalker.png
-    - assets/images/videoCovers/RobotWalking.png
-    - assets/images/videoCovers/RubixSurvival.png
-    - assets/images/videoCovers/SliceyJump.png
-    - assets/images/videoCovers/SpeedTour.png
-    - assets/images/videoCovers/TruckModel.PNG
-
-    - assets/images/ReviewBookDesign.png
-    - assets/images/ShiftAppDesign.png

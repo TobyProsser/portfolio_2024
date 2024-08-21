@@ -98,16 +98,7 @@ class ControllerWidgetState extends State<ControllerWidget>
   bool flash = false;
 
   Future<void> _loadRiveFile() async {
-    List<String> artboardNames = [
-      'ControllerBackground',
-      'ControllerDpad',
-      'ControllerButton',
-      'HomeButton',
-      'Grills',
-      'Plane',
-      'Planet',
-      'ControllerFull'
-    ];
+    List<String> artboardNames = ['ControllerFull'];
 
     final bytes = await rootBundle.load(riveFileName);
     final file = RiveFile.import(bytes);
@@ -118,10 +109,10 @@ class ControllerWidgetState extends State<ControllerWidget>
       });
     }
     _controller = StateMachineController.fromArtboard(
-      artBoards[7],
+      artBoards[0],
       'ControllerStateMachine',
     )!;
-    artBoards[7].addController(_controller);
+    artBoards[0].addController(_controller);
     _upArrow = _controller.findInput<bool>('upArrowDown') as SMIBool;
     _button1 = _controller.findInput<bool>('Button1Down') as SMIBool;
     _button2 = _controller.findInput<bool>('Button2Down') as SMIBool;
@@ -292,9 +283,9 @@ class ControllerWidgetState extends State<ControllerWidget>
     // ignore: unused_local_variable
     double height = MediaQuery.of(context).size.height;
 
-    return RawKeyboardListener(
+    return KeyboardListener(
       focusNode: _focusNode,
-      onKey: _handleKeyEvent,
+      onKeyEvent: _handleKeyEvent,
       child: _loaded
           ? Column(
               children: [
@@ -355,13 +346,13 @@ class ControllerWidgetState extends State<ControllerWidget>
                   child: LayoutBuilder(
                     builder: (context, constraints) => Stack(
                       children: [
-                        artBoards.length <= 7
-                            ? CircularProgressIndicator()
+                        artBoards.isEmpty
+                            ? const CircularProgressIndicator()
                             : SizedBox(
                                 width: constraints.maxWidth,
                                 height: constraints.maxHeight,
                                 child: Rive(
-                                  artboard: artBoards[7],
+                                  artboard: artBoards[0],
                                   alignment: Alignment.center,
                                   fit: BoxFit.cover,
                                   useArtboardSize: true,
@@ -675,12 +666,9 @@ class ControllerWidgetState extends State<ControllerWidget>
     LogicalKeyboardKey.digit2.keyId: '2',
   };
 
-// A list to store the pressed directions
-  final List<String> _pressedDirections = [];
-
   final controller = ControllerWidget(mobile: false);
 // A method to handle the key events
-  void _handleKeyEvent(RawKeyEvent event) {
+  void _handleKeyEvent(KeyEvent event) {
     // Get the key code of the event
     final int keyCode = event.logicalKey.keyId;
 

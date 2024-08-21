@@ -86,15 +86,7 @@ class PlanetState extends State<Planet> with SingleTickerProviderStateMixin {
 
   Future<void> _loadRiveFile() async {
     List<String> artboardNames = [
-      'ControllerBackground',
-      'ControllerDpad',
-      'ControllerButton',
-      'HomeButton',
-      'Grills',
-      'Plane',
       'Planet',
-      'ControllerFull',
-      'Scanner',
       'Planet1',
       'Planet2',
       'Planet3',
@@ -151,6 +143,7 @@ class PlanetState extends State<Planet> with SingleTickerProviderStateMixin {
     _loadRiveFile();
 
     super.initState();
+    print("PLANET INIT");
   }
 
   @override
@@ -199,13 +192,13 @@ class PlanetState extends State<Planet> with SingleTickerProviderStateMixin {
   int getArtboardNum() {
     int number = 0;
     if (widget.planetLookNum == 0) {
-      number = 6;
+      number = 0;
     } else if (widget.planetLookNum == 1) {
-      number = 9;
+      number = 1;
     } else if (widget.planetLookNum == 2) {
-      number = 10;
+      number = 2;
     } else {
-      number = 11;
+      number = 3;
     }
     return number;
   }
@@ -213,13 +206,13 @@ class PlanetState extends State<Planet> with SingleTickerProviderStateMixin {
   int getFlagArtboardNum() {
     int number = 0;
     if (widget.planetLookNum == 0) {
-      number = 12;
+      number = 4;
     } else if (widget.planetLookNum == 1) {
-      number = 13;
+      number = 5;
     } else if (widget.planetLookNum == 2) {
-      number = 14;
+      number = 7;
     } else {
-      number = 16;
+      number = 8;
     }
     return number;
   }

@@ -374,20 +374,6 @@ class PlanetState extends State<Planet> with SingleTickerProviderStateMixin {
             fit: StackFit.expand,
             alignment: Alignment.center,
             children: [
-              // Positioned(
-              //   bottom: findFlagHeight(),
-              //   child: Container(),
-              //   //child:  Container(
-              //   //   child: FlagWidget(
-              //   //     text: findFlagText(),
-              //   //     flagLength: findFlagLength(),
-              //   //   ).copywith(
-              //   //     globalKey: flagKey,
-              //   //     text: findFlagText(),
-              //   //   ),
-              //   // ),
-              // ),
-
               widget.selected
                   ? OverflowBox(
                       child: Container(
@@ -405,7 +391,7 @@ class PlanetState extends State<Planet> with SingleTickerProviderStateMixin {
                   : Container(),
               GestureDetector(
                 onTap: () {
-                  widget.onPlanetClick?.call();
+                  //widget.onPlanetClick?.call();
                 },
                 child: Rive(
                   artboard: artBoards[getArtboardNum()],

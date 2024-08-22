@@ -104,20 +104,7 @@ class ContainerWidgetState extends State<ContainerWidget>
   late bool complete = false;
   Future<void> _loadRiveFile() async {
     List<String> artboardNames = [
-      'ControllerBackground',
-      'ControllerDpad',
-      'ControllerButton',
-      'HomeButton',
-      'Grills',
-      'Plane',
-      'Planet',
-      'ControllerFull',
-      'Scanner',
-      'Planet1',
-      'Planet2',
-      'Planet3',
       'floatingTitleHolder',
-      'Planet2',
     ];
 
     final bytes = await rootBundle.load(riveFileName);
@@ -130,10 +117,10 @@ class ContainerWidgetState extends State<ContainerWidget>
     }
 
     _controller = StateMachineController.fromArtboard(
-      artBoards[12],
+      artBoards[0],
       'State Machine 1',
     )!;
-    artBoards[12].addController(_controller);
+    artBoards[0].addController(_controller);
     complete = true;
   }
 
@@ -159,66 +146,7 @@ class ContainerWidgetState extends State<ContainerWidget>
   @override
   void initState() {
     _loadRiveFile();
-    // Initialize the controller with a duration of one second
-    animController = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 1),
-    );
-    // Initialize the width animation from 50 to 300 pixels
-    Tween<double> tween =
-        Tween<double>(begin: 30, end: (widget.screenWidth * .9));
-    // Initialize the height animation from 50 to 200 pixels
-    Tween<double> tween1 =
-        Tween<double>(begin: 30, end: (widget.screenHeight * 2) / 3);
-    Tween<double> tween2 = Tween<double>(begin: widget.topStart, end: (25));
-    Tween<double> tween3 =
-        Tween<double>(begin: widget.leftStart, end: (widget.screenWidth * .05));
-    Tween<double>(begin: widget.topStart, end: (widget.screenHeight * .1));
-    Tween<double> tween4 = Tween<double>(begin: 15, end: 4);
-
-    _widthAnimation = tween.animate(
-      CurvedAnimation(
-        parent: animController,
-        curve: Curves.easeOut,
-      ),
-    );
-    _heightAnimation = tween1.animate(
-      CurvedAnimation(
-        parent: animController,
-        curve: Curves.easeOut,
-      ),
-    );
-
-    _topAnimation = tween2.animate(
-      CurvedAnimation(
-        parent: animController,
-        curve: Curves.easeOut,
-      ),
-    );
-    _leftAnimation = tween3.animate(
-      CurvedAnimation(
-        parent: animController,
-        curve: Curves.easeOut,
-      ),
-    );
-
-    _borderAnimation = tween4.animate(
-      CurvedAnimation(
-        parent: animController,
-        curve: Curves.easeOut,
-      ),
-    );
-
-    // Initialize the border radius animation from 25 to 0 pixels
-    _borderRadiusAnimation = BorderRadiusTween(
-      begin: BorderRadius.circular(25),
-      end: BorderRadius.circular(20),
-    ).animate(animController);
-    // Add a listener to rebuild the widget when the animation changes
-    animController.addListener(() {
-      setState(() {});
-    });
-
+    initAnimation();
     super.initState();
   }
 
@@ -228,6 +156,72 @@ class ContainerWidgetState extends State<ContainerWidget>
     animController.dispose();
     _controller.dispose();
     super.dispose();
+  }
+
+  void initAnimation() {
+    try {
+      // Initialize the controller with a duration of one second
+      animController = AnimationController(
+        vsync: this,
+        duration: const Duration(seconds: 1),
+      );
+      // Initialize the width animation from 50 to 300 pixels
+      Tween<double> tween =
+          Tween<double>(begin: 30, end: (widget.screenWidth * .9));
+      // Initialize the height animation from 50 to 200 pixels
+      Tween<double> tween1 =
+          Tween<double>(begin: 30, end: (widget.screenHeight * 2) / 3);
+      Tween<double> tween2 = Tween<double>(begin: widget.topStart, end: (25));
+      Tween<double> tween3 = Tween<double>(
+          begin: widget.leftStart, end: (widget.screenWidth * .05));
+      Tween<double>(begin: widget.topStart, end: (widget.screenHeight * .1));
+      Tween<double> tween4 = Tween<double>(begin: 15, end: 4);
+
+      _widthAnimation = tween.animate(
+        CurvedAnimation(
+          parent: animController,
+          curve: Curves.easeOut,
+        ),
+      );
+      _heightAnimation = tween1.animate(
+        CurvedAnimation(
+          parent: animController,
+          curve: Curves.easeOut,
+        ),
+      );
+
+      _topAnimation = tween2.animate(
+        CurvedAnimation(
+          parent: animController,
+          curve: Curves.easeOut,
+        ),
+      );
+      _leftAnimation = tween3.animate(
+        CurvedAnimation(
+          parent: animController,
+          curve: Curves.easeOut,
+        ),
+      );
+
+      _borderAnimation = tween4.animate(
+        CurvedAnimation(
+          parent: animController,
+          curve: Curves.easeOut,
+        ),
+      );
+
+      // Initialize the border radius animation from 25 to 0 pixels
+      _borderRadiusAnimation = BorderRadiusTween(
+        begin: BorderRadius.circular(25),
+        end: BorderRadius.circular(20),
+      ).animate(animController);
+      // Add a listener to rebuild the widget when the animation changes
+      animController.addListener(() {
+        setState(() {});
+      });
+    } catch (e) {
+      print("ERROR: " + e.toString());
+    }
   }
 
   @override
@@ -312,7 +306,7 @@ class ContainerWidgetState extends State<ContainerWidget>
                               children: [
                                 //fLOATING MOON TITLE
                                 Rive(
-                                  artboard: artBoards[12],
+                                  artboard: artBoards[0],
                                   alignment: Alignment.center,
                                   useArtboardSize: true,
                                 ),

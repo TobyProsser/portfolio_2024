@@ -54,7 +54,7 @@ class UnityContentState extends State<UnityContent>
         const SizedBox(
           height: 20,
         ),
-        widget.mobile
+        !widget.mobile
             ? const MobileSwap(
                 youtubeLink: "https://youtu.be/aqsQiXQv4Sw",
                 imagePath: "assets/images/videoCovers/LofiIslandsCover.png",
@@ -2205,7 +2205,7 @@ class _GalleryContentState extends State<GalleryContent> {
               child: Container(
                 clipBehavior: Clip.hardEdge,
                 constraints: const BoxConstraints(
-                  maxWidth: 175,
+                  maxWidth: 200,
                 ),
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(
@@ -2225,7 +2225,7 @@ class _GalleryContentState extends State<GalleryContent> {
                 ),
                 child: DisplayImage(
                   imagePath: "assets/images/GamesGallery2.png",
-                  width: 175,
+                  width: 200,
                   height: 300,
                 ),
               ),
@@ -2260,7 +2260,7 @@ class _GalleryContentState extends State<GalleryContent> {
             child: Container(
               clipBehavior: Clip.hardEdge,
               constraints: const BoxConstraints(
-                maxWidth: 400,
+                maxWidth: 300,
               ),
               decoration: BoxDecoration(
                 color: const Color.fromARGB(
@@ -2292,7 +2292,7 @@ class _GalleryContentState extends State<GalleryContent> {
             child: Container(
               clipBehavior: Clip.hardEdge,
               constraints: const BoxConstraints(
-                maxWidth: 400,
+                maxWidth: 300,
               ),
               decoration: BoxDecoration(
                 color: const Color.fromARGB(
@@ -2536,7 +2536,7 @@ class _AboutContentState extends State<AboutContent> {
               child: Container(
                 clipBehavior: Clip.hardEdge,
                 constraints: const BoxConstraints(
-                  maxWidth: 210,
+                  maxWidth: 220,
                 ),
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(
@@ -2556,7 +2556,7 @@ class _AboutContentState extends State<AboutContent> {
                 ),
                 child: DisplayImage(
                   imagePath: "assets/images/ResumeImage.png",
-                  width: 210,
+                  width: 200,
                   height: 300,
                 ),
               ),
@@ -2725,7 +2725,7 @@ class _AboutPortfolioContentState extends State<AboutPortfolioContent> {
               child: Container(
                 clipBehavior: Clip.hardEdge,
                 constraints: const BoxConstraints(
-                  maxWidth: 400,
+                  maxWidth: 300,
                 ),
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(
@@ -2858,10 +2858,10 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
         const SizedBox(
           height: 20,
         ),
-        widget.mobile
+        !widget.mobile
             ? const MobileSwap(
                 youtubeLink: "https://www.youtube.com/watch?v=wPDQrEsVuAw",
-                imagePath: "assets/images/Hanger18/homeScreen.png",
+                imagePath: "assets/images/Hanger18/homeScreen.PNG",
                 vertical: true,
               )
             : Padding(

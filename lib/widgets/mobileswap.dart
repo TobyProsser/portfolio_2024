@@ -50,7 +50,8 @@ class _MobileSwapState extends State<MobileSwap> {
             padding: const EdgeInsets.all(20.0),
             child: widget.vertical
                 ? Container(
-                    height: 400,
+                    height: 350,
+                    width: 175,
                     clipBehavior: Clip.hardEdge,
                     decoration: BoxDecoration(
                       color: const Color.fromARGB(255, 250, 253,
@@ -71,11 +72,12 @@ class _MobileSwapState extends State<MobileSwap> {
                     child: DisplayImage(
                       imagePath: widget.imagePath,
                       width: 175,
-                      height: 300,
+                      height: 350,
                     ),
                   )
                 : Container(
-                    width: 400,
+                    width: 300,
+                    height: 175,
                     clipBehavior: Clip.hardEdge,
                     decoration: BoxDecoration(
                       color: const Color.fromARGB(255, 250, 253,

@@ -134,14 +134,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     complete = true;
   }
 
-  @override
-  void initState() {
-    super.initState();
-
-    _audioPlayer = AudioPlayer();
-    _focusNode.requestFocus();
-    simulateLoading();
-    //initPlanets();
+  void initAnimations() {
     _animController = AnimationController(
       duration: const Duration(milliseconds: 500),
       vsync: this,
@@ -243,8 +236,19 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       ..addListener(() {
         setState(() {});
       });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    _audioPlayer = AudioPlayer();
+    _focusNode.requestFocus();
+    simulateLoading();
 
     _loadRiveFile();
+
+    initAnimations();
 
     widget.loaded = true;
 

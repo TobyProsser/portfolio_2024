@@ -54,9 +54,10 @@ class UnityContentState extends State<UnityContent>
         const SizedBox(
           height: 20,
         ),
-        !widget.mobile
+        widget.mobile
             ? const MobileSwap(
                 youtubeLink: "https://youtu.be/aqsQiXQv4Sw",
+                youtubeCode: "aqsQiXQv4Sw",
                 imagePath: "assets/images/videoCovers/LofiIslandsCover.png",
                 vertical: true,
               )
@@ -214,6 +215,7 @@ class UnityContentState extends State<UnityContent>
             ? const MobileSwap(
                 youtubeLink:
                     "https://youtube.com/shorts/xpuXeBJluq8?feature=share",
+                youtubeCode: "xpuXeBJluq8",
                 imagePath: "assets/images/videoCovers/PlanetWalker.png",
                 vertical: true,
               )
@@ -407,6 +409,7 @@ class UnityContentState extends State<UnityContent>
             ? const MobileSwap(
                 youtubeLink:
                     "https://youtube.com/shorts/Xwrs9FQPljg?feature=share",
+                youtubeCode: "Xwrs9FQPljg",
                 imagePath: "assets/images/videoCovers/SliceyJump.png",
                 vertical: true,
               )
@@ -653,6 +656,7 @@ class UnrealContentState extends State<UnrealContent>
         widget.mobile
             ? const MobileSwap(
                 youtubeLink: "https://youtu.be/fL1uo3cDW4U",
+                youtubeCode: "fL1uo3cDW4U",
                 imagePath: "assets/images/videoCovers/ArcMastermind.png",
                 vertical: false,
               )
@@ -923,6 +927,7 @@ class UnrealContentState extends State<UnrealContent>
         widget.mobile
             ? const MobileSwap(
                 youtubeLink: "https://youtu.be/b1BuuSyNqaQ",
+                youtubeCode: "b1BuuSyNqaQ",
                 imagePath: "assets/images/videoCovers/RubixSurvival.png",
                 vertical: false,
               )
@@ -1641,6 +1646,7 @@ class BSIDevContentState extends State<BSIDevContent>
         widget.mobile
             ? const MobileSwap(
                 youtubeLink: "https://youtu.be/Irt-k8kTxe4",
+                youtubeCode: "Irt-k8kTxe4",
                 imagePath: "assets/images/videoCovers/SpeedTour.png",
                 vertical: true,
               )
@@ -1696,6 +1702,7 @@ class BSIDevContentState extends State<BSIDevContent>
         widget.mobile
             ? const MobileSwap(
                 youtubeLink: "https://youtu.be/q2LVQvYl_S8",
+                youtubeCode: "q2LVQvYl_S8",
                 imagePath: "assets/images/videoCovers/BSIResponsive.png",
                 vertical: false,
               )
@@ -1751,6 +1758,7 @@ class BSIDevContentState extends State<BSIDevContent>
         widget.mobile
             ? const MobileSwap(
                 youtubeLink: "https://youtu.be/b4oC9aBOTXU",
+                youtubeCode: "b4oC9aBOTXU",
                 imagePath: "assets/images/videoCovers/BSIDashboard.png",
                 vertical: false,
               )
@@ -1967,6 +1975,7 @@ class ModelVideoContentState extends State<ModelVideoContent>
               ? const MobileSwap(
                   youtubeLink:
                       "https://youtube.com/shorts/RHfPbcMsx1Q?feature=share",
+                  youtubeCode: "RHfPbcMsx1Q",
                   imagePath: "assets/images/videoCovers/BallDropModel.png",
                   vertical: false,
                 )
@@ -2006,6 +2015,7 @@ class ModelVideoContentState extends State<ModelVideoContent>
           widget.mobile
               ? const MobileSwap(
                   youtubeLink: "https://youtu.be/ZBtIcdt92lc",
+                  youtubeCode: "ZBtIcdt92lc",
                   imagePath: "assets/images/videoCovers/RobotWalking.png",
                   vertical: false,
                 )
@@ -2045,6 +2055,7 @@ class ModelVideoContentState extends State<ModelVideoContent>
           widget.mobile
               ? const MobileSwap(
                   youtubeLink: "https://youtu.be/1cRI-09-5vE",
+                  youtubeCode: "1cRI-09-5vE",
                   imagePath: "assets/images/videoCovers/TruckModel.PNG",
                   vertical: false,
                 )
@@ -2344,6 +2355,7 @@ class _GalleryContentState extends State<GalleryContent> {
               ? const MobileSwap(
                   youtubeLink:
                       "https://youtube.com/shorts/RHfPbcMsx1Q?feature=share",
+                  youtubeCode: "RHfPbcMsx1Q",
                   imagePath: "assets/images/videoCovers/BallDropModel.png",
                   vertical: false,
                 )
@@ -2383,6 +2395,7 @@ class _GalleryContentState extends State<GalleryContent> {
           widget.mobile
               ? const MobileSwap(
                   youtubeLink: "https://youtu.be/ZBtIcdt92lc",
+                  youtubeCode: "ZBtIcdt92lc",
                   imagePath: "assets/images/videoCovers/RobotWalking.png",
                   vertical: false,
                 )
@@ -2422,6 +2435,7 @@ class _GalleryContentState extends State<GalleryContent> {
           widget.mobile
               ? const MobileSwap(
                   youtubeLink: "https://youtu.be/1cRI-09-5vE",
+                  youtubeCode: "1cRI-09-5vE",
                   imagePath: "assets/images/videoCovers/TruckModel.PNG",
                   vertical: false,
                 )
@@ -2861,6 +2875,7 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
         !widget.mobile
             ? const MobileSwap(
                 youtubeLink: "https://www.youtube.com/watch?v=wPDQrEsVuAw",
+                youtubeCode: "wPDQrEsVuAw",
                 imagePath: "assets/images/Hanger18/homeScreen.PNG",
                 vertical: true,
               )
@@ -3177,6 +3192,7 @@ class ClimbingAppDesignContentState extends State<ClimbingAppDesignContent>
             ? const MobileSwap(
                 youtubeLink:
                     "https://youtube.com/shorts/VyNX46fG0c4?feature=share",
+                youtubeCode: "VyNX46fG0c4",
                 imagePath: "assets/images/Hanger18/dropDown.PNG",
                 vertical: true,
               )

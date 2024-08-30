@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_2024/screens/initscreen.dart';
 
 import 'screens/homescreen.dart';
 
@@ -50,7 +51,8 @@ class _MainAppState extends State<MainApp> {
 
       initialRoute: '/',
       routes: {
-        '/': (context) => homeScreen,
+        '/': (context) => const Initscreen(),
+        '/home': (context) => homeScreen,
       },
     );
   }

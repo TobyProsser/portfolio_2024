@@ -1,8 +1,11 @@
 import 'dart:html' as html; // for opening web pages
 
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_pdfview/flutter_pdfview.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_2024/widgets/mobileswap.dart';
+import 'package:portfolio_2024/widgets/pdfviewer.dart';
 import 'package:portfolio_2024/widgets/simpleHtmlYoutubeIframe.dart';
 //import 'package:pdfx/pdfx.dart';
 
@@ -51,6 +54,296 @@ class UnityContentState extends State<UnityContent>
     return SingleChildScrollView(
         child: Column(
       children: [
+        // const SizedBox(
+        //   height: 20,
+        // ),
+        // widget.mobile
+        //     ? const MobileSwap(
+        //         youtubeLink: "https://youtu.be/aqsQiXQv4Sw",
+        //         youtubeCode: "aqsQiXQv4Sw",
+        //         imagePath: "assets/images/videoCovers/LofiIslandsCover.png",
+        //         vertical: true,
+        //       )
+        //     : Padding(
+        //         padding: const EdgeInsets.all(20.0),
+        //         child: Container(
+        //           clipBehavior: Clip.hardEdge,
+        //           constraints: const BoxConstraints(
+        //             maxWidth: 400, // Set the maximum width to 200
+        //           ),
+        //           decoration: BoxDecoration(
+        //             color: const Color.fromARGB(
+        //                 255, 250, 253, 255), // Set the container color to blue
+        //             borderRadius: BorderRadius.circular(
+        //                 20), // Set the container edges to be curved
+        //             boxShadow: [
+        //               // Add a dropshadow effect
+        //               BoxShadow(
+        //                 color: Colors.black.withOpacity(
+        //                     0.5), // Set the shadow color to black with some opacity
+        //                 blurRadius: 10, // Set the blur radius of the shadow
+        //                 offset:
+        //                     const Offset(5, 5), // Set the offset of the shadow
+        //               ),
+        //             ],
+        //           ),
+        //           child: const Center(
+        //               child: SimpleHtmlYoutubeIframe(
+        //             youtubeCode: "aqsQiXQv4Sw",
+        //             key: null,
+        //           )),
+        //         ),
+        //       ),
+        const SizedBox(
+          height: 20,
+        ),
+        GestureDetector(
+          onTap: () {
+            // navigate to a new page with the full screen image
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const FullScreenImage(
+                  "assets/images/mastermindMobile/Home.JPG",
+                ),
+              ),
+            );
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Container(
+              clipBehavior: Clip.hardEdge,
+              constraints: const BoxConstraints(
+                maxWidth: 220,
+              ),
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(
+                    255, 250, 253, 255), // Set the container color to blue
+                borderRadius: BorderRadius.circular(
+                    20), // Set the container edges to be curved
+                boxShadow: [
+                  // Add a dropshadow effect
+                  BoxShadow(
+                    color: Colors.black.withOpacity(
+                        0.5), // Set the shadow color to black with some opacity
+                    blurRadius: 10, // Set the blur radius of the shadow
+                    offset: const Offset(5, 5), // Set the offset of the shadow
+                  ),
+                ],
+              ),
+              child: DisplayImage(
+                imagePath: "assets/images/mastermindMobile/Home.JPG",
+                width: 220,
+                height: 300,
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        GestureDetector(
+          onTap: () {
+            // navigate to a new page with the full screen image
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const FullScreenImage(
+                    "assets/images/mastermindMobile/Dougen.JPG"),
+              ),
+            );
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Container(
+              clipBehavior: Clip.hardEdge,
+              constraints: const BoxConstraints(
+                maxWidth: 220,
+              ),
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(
+                    255, 250, 253, 255), // Set the container color to blue
+                borderRadius: BorderRadius.circular(
+                    20), // Set the container edges to be curved
+                boxShadow: [
+                  // Add a dropshadow effect
+                  BoxShadow(
+                    color: Colors.black.withOpacity(
+                        0.5), // Set the shadow color to black with some opacity
+                    blurRadius: 10, // Set the blur radius of the shadow
+                    offset: const Offset(5, 5), // Set the offset of the shadow
+                  ),
+                ],
+              ),
+              child: DisplayImage(
+                imagePath: "assets/images/mastermindMobile/Dougen.JPG",
+                width: 220,
+                height: 300,
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        GestureDetector(
+          onTap: () {
+            // navigate to a new page with the full screen image
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const FullScreenImage(
+                    "assets/images/mastermindMobile/PrepEmpty.JPG"),
+              ),
+            );
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Container(
+              clipBehavior: Clip.hardEdge,
+              constraints: const BoxConstraints(
+                maxWidth: 220,
+              ),
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(
+                    255, 250, 253, 255), // Set the container color to blue
+                borderRadius: BorderRadius.circular(
+                    20), // Set the container edges to be curved
+                boxShadow: [
+                  // Add a dropshadow effect
+                  BoxShadow(
+                    color: Colors.black.withOpacity(
+                        0.5), // Set the shadow color to black with some opacity
+                    blurRadius: 10, // Set the blur radius of the shadow
+                    offset: const Offset(5, 5), // Set the offset of the shadow
+                  ),
+                ],
+              ),
+              child: DisplayImage(
+                imagePath: "assets/images/mastermindMobile/PrepEmpty.JPG",
+                width: 220,
+                height: 300,
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        Text(
+          "PortaDex (WIP)",
+          style: GoogleFonts.interTight(
+            textStyle: Theme.of(context).textTheme.displayLarge,
+            fontSize: 35,
+            fontWeight: FontWeight.w400,
+            color: Colors.black,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(
+          height: 3,
+        ),
+        Container(
+          width: 300,
+          height: 1,
+          color: Colors.black,
+        ),
+        const SizedBox(
+          height: 7,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Text(
+            "A 2d mobile game created in Unity using C#. Designed to look like a modern/retro gaming handheld, slay monsters by selecting your order of movements for the incoming battle. Increase stats to reveal more incoming attacks and collect the fallens cards to continue your journey.",
+            style: GoogleFonts.interTight(
+              textStyle: Theme.of(context).textTheme.displayLarge,
+              fontSize: 20,
+              fontWeight: FontWeight.w400,
+              color: Colors.black,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        Text(
+          "Camera Movement",
+          style: GoogleFonts.interTight(
+            textStyle: Theme.of(context).textTheme.displayLarge,
+            fontSize: 35,
+            fontWeight: FontWeight.w400,
+            color: Colors.black,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(
+          height: 3,
+        ),
+        Container(
+          width: 300,
+          height: 1,
+          color: Colors.black,
+        ),
+        const SizedBox(
+          height: 7,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Text(
+            "The map has bounds that are set acording to the edges of the UI console. As long as the player is within the threshold of its 'center point' the map will move with the joystick. If the edge of the map is hit the player begins to move instead. This continues until the player is back in its threshold.",
+            style: GoogleFonts.interTight(
+              textStyle: Theme.of(context).textTheme.displayLarge,
+              fontSize: 20,
+              fontWeight: FontWeight.w400,
+              color: Colors.black,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Text(
+                    "View the Code: ",
+                    style: GoogleFonts.interTight(
+                      textStyle: Theme.of(context).textTheme.displayLarge,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.black,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  FloatingActionButton.extended(
+                    backgroundColor: const Color(0xff6e5494),
+                    label: Text(
+                      "GitHub",
+                      style: GoogleFonts.interTight(
+                        textStyle: Theme.of(context).textTheme.displayLarge,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                        color: const Color(0xfffafafa),
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    onPressed: () {
+                      html.window.open(
+                          'https://github.com/TobyProsser/LofiIslands',
+                          '_blank');
+                    },
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
         const SizedBox(
           height: 20,
         ),
@@ -2865,12 +3158,26 @@ class ClimbingAppContent extends StatefulWidget {
 
 class ClimbingAppContentState extends State<ClimbingAppContent>
     with TickerProviderStateMixin {
+  String? pdfUrl;
   @override
   void initState() {
     super.initState();
+    getPDFUrl();
   }
 
-  void loadVideo() {}
+  Future<String?> getPDFUrl() async {
+    try {
+      final Reference ref = FirebaseStorage.instance
+          .ref()
+          .child("assets/pdfs/ClimberLBpitch.pdf");
+      final String url = await ref.getDownloadURL();
+      setState(() {
+        pdfUrl = url;
+      });
+    } catch (e) {
+      print("Error Fetching climber pitch: $e");
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -2995,7 +3302,7 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
           height: 20,
         ),
         Text(
-          "Pitch Email:",
+          "App Proposal:",
           style: GoogleFonts.interTight(
             textStyle: Theme.of(context).textTheme.displayLarge,
             fontSize: 35,
@@ -3011,29 +3318,38 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
           padding: const EdgeInsets.all(20.0),
           child: Container(
             clipBehavior: Clip.hardEdge,
-            constraints: const BoxConstraints(
-              maxWidth: 220,
-            ),
+            width: 220,
+            height: 300,
             decoration: BoxDecoration(
-              color: const Color.fromARGB(
-                  255, 250, 253, 255), // Set the container color to blue
-              borderRadius: BorderRadius.circular(
-                  20), // Set the container edges to be curved
+              color: const Color.fromARGB(255, 250, 253, 255),
+              borderRadius: BorderRadius.circular(20),
               boxShadow: [
-                // Add a dropshadow effect
                 BoxShadow(
-                  color: Colors.black.withOpacity(
-                      0.5), // Set the shadow color to black with some opacity
-                  blurRadius: 10, // Set the blur radius of the shadow
-                  offset: const Offset(5, 5), // Set the offset of the shadow
+                  color: Colors.black.withOpacity(0.5),
+                  blurRadius: 10,
+                  offset: const Offset(5, 5),
                 ),
               ],
             ),
-            child: DisplayImage(
-              imagePath: "assets/images/Hanger18/Hanger18Letter.png",
-              width: 220,
-              height: 300,
-            ),
+            child: pdfUrl != null
+                ? PDFViewer(
+                    url: pdfUrl,
+                    onToggleFullScreen: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => PDFViewer(
+                            url: pdfUrl,
+                            isFullScreen: true,
+                            onToggleFullScreen: () {
+                              Navigator.pop(context);
+                            },
+                          ),
+                        ),
+                      );
+                    },
+                  )
+                : Center(child: CircularProgressIndicator()),
           ),
         ),
         const SizedBox(
@@ -3146,53 +3462,6 @@ class ClimbingAppContentState extends State<ClimbingAppContent>
             ),
           ],
         ),
-      ],
-    ));
-  }
-}
-
-class ClimbingAppDesignContent extends StatefulWidget {
-  ClimbingAppDesignContent({
-    super.key,
-    this.globalKey,
-    this.open = true,
-    required this.mobile,
-  });
-  final bool mobile;
-  late GlobalKey<ClimbingAppDesignContentState>? globalKey;
-  late bool open = true;
-
-  @override
-  State<ClimbingAppDesignContent> createState() =>
-      ClimbingAppDesignContentState();
-
-  ClimbingAppDesignContent copyWith({
-    GlobalKey<ClimbingAppDesignContentState>? globalKey,
-    bool? open,
-    bool? mobile,
-  }) {
-    return ClimbingAppDesignContent(
-      globalKey: globalKey ?? this.globalKey,
-      open: open ?? this.open,
-      mobile: mobile ?? this.mobile,
-    );
-  }
-}
-
-class ClimbingAppDesignContentState extends State<ClimbingAppDesignContent>
-    with TickerProviderStateMixin {
-  @override
-  void initState() {
-    super.initState();
-  }
-
-  void loadVideo() {}
-
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-        child: Column(
-      children: [
         const SizedBox(
           height: 20,
         ),
@@ -3434,6 +3703,399 @@ class ClimbingAppDesignContentState extends State<ClimbingAppDesignContent>
               ),
             ),
           ],
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+      ],
+    ));
+  }
+}
+
+class ClimbingAppDesignContent extends StatefulWidget {
+  ClimbingAppDesignContent({
+    super.key,
+    this.globalKey,
+    this.open = true,
+    required this.mobile,
+  });
+  final bool mobile;
+  late GlobalKey<ClimbingAppDesignContentState>? globalKey;
+  late bool open = true;
+
+  @override
+  State<ClimbingAppDesignContent> createState() =>
+      ClimbingAppDesignContentState();
+
+  ClimbingAppDesignContent copyWith({
+    GlobalKey<ClimbingAppDesignContentState>? globalKey,
+    bool? open,
+    bool? mobile,
+  }) {
+    return ClimbingAppDesignContent(
+      globalKey: globalKey ?? this.globalKey,
+      open: open ?? this.open,
+      mobile: mobile ?? this.mobile,
+    );
+  }
+}
+
+class ClimbingAppDesignContentState extends State<ClimbingAppDesignContent>
+    with TickerProviderStateMixin {
+  String? pdfUrl;
+  @override
+  void initState() {
+    super.initState();
+    getPDFUrl();
+  }
+
+  Future<String?> getPDFUrl() async {
+    try {
+      final Reference ref = FirebaseStorage.instance
+          .ref()
+          .child("assets/pdfs/DownstockerPitch.pdf");
+      final String url = await ref.getDownloadURL();
+      setState(() {
+        pdfUrl = url;
+      });
+    } catch (e) {
+      print("Error Fetching climber pitch: $e");
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+        child: Column(
+      children: [
+        const SizedBox(
+          height: 20,
+        ),
+        !widget.mobile
+            ? const MobileSwap(
+                youtubeLink: "https://www.youtube.com/watch?v=x00H1lyD1AM",
+                youtubeCode: "x00H1lyD1AM",
+                imagePath: "assets/images/Downstocker/Pathmap2.png",
+                vertical: true,
+              )
+            : Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Container(
+                  clipBehavior: Clip.hardEdge,
+                  constraints: const BoxConstraints(
+                    maxWidth: 400, // Set the maximum width to 200
+                  ),
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(
+                        255, 250, 253, 255), // Set the container color to blue
+                    borderRadius: BorderRadius.circular(
+                        20), // Set the container edges to be curved
+                    boxShadow: [
+                      // Add a dropshadow effect
+                      BoxShadow(
+                        color: Colors.black.withOpacity(
+                            0.5), // Set the shadow color to black with some opacity
+                        blurRadius: 10, // Set the blur radius of the shadow
+                        offset:
+                            const Offset(5, 5), // Set the offset of the shadow
+                      ),
+                    ],
+                  ),
+                  child: const Center(
+                      child: SimpleHtmlYoutubeIframe(
+                    youtubeCode: "x00H1lyD1AM",
+                    key: null,
+                  )),
+                ),
+              ),
+        const SizedBox(
+          height: 20,
+        ),
+        Text(
+          "DownStocker",
+          style: GoogleFonts.interTight(
+            textStyle: Theme.of(context).textTheme.displayLarge,
+            fontSize: 35,
+            fontWeight: FontWeight.w400,
+            color: Colors.black,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(
+          height: 3,
+        ),
+        Container(
+          width: 300,
+          height: 1,
+          color: Colors.black,
+        ),
+        const SizedBox(
+          height: 7,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Text(
+            "A functional prototype created for BestBuy and their downstocking team. The app improves the efficency of downstocking, specificly with seasonal employees.",
+            style: GoogleFonts.interTight(
+              textStyle: Theme.of(context).textTheme.displayLarge,
+              fontSize: 20,
+              fontWeight: FontWeight.w400,
+              color: Colors.black,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        Text(
+          "Path Generation",
+          style: GoogleFonts.interTight(
+            textStyle: Theme.of(context).textTheme.displayLarge,
+            fontSize: 35,
+            fontWeight: FontWeight.w400,
+            color: Colors.black,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(
+          height: 3,
+        ),
+        Container(
+          width: 300,
+          height: 1,
+          color: Colors.black,
+        ),
+        const SizedBox(
+          height: 7,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Text(
+            "After scanning the products and navigating to the map tab a path will be generated from the warehouse to the closest point while avoiding the shelves. To allow users to add new items at any time after completing the product(stocking it) the algerithm finds the next closest point and makes a path to connect them. This increases item efficency when walking around the store to stock the items in a given tote.",
+            style: GoogleFonts.interTight(
+              textStyle: Theme.of(context).textTheme.displayLarge,
+              fontSize: 20,
+              fontWeight: FontWeight.w400,
+              color: Colors.black,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        Text(
+          "App Proposal",
+          style: GoogleFonts.interTight(
+            textStyle: Theme.of(context).textTheme.displayLarge,
+            fontSize: 35,
+            fontWeight: FontWeight.w400,
+            color: Colors.black,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(
+          height: 3,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Container(
+            clipBehavior: Clip.hardEdge,
+            width: 220,
+            height: 300,
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 250, 253, 255),
+              borderRadius: BorderRadius.circular(20),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.5),
+                  blurRadius: 10,
+                  offset: const Offset(5, 5),
+                ),
+              ],
+            ),
+            child: pdfUrl != null
+                ? PDFViewer(
+                    url: pdfUrl,
+                    onToggleFullScreen: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => PDFViewer(
+                            url: pdfUrl,
+                            isFullScreen: true,
+                            onToggleFullScreen: () {
+                              Navigator.pop(context);
+                            },
+                          ),
+                        ),
+                      );
+                    },
+                  )
+                : Center(child: CircularProgressIndicator()),
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        Text(
+          "Figma Designs",
+          style: GoogleFonts.interTight(
+            textStyle: Theme.of(context).textTheme.displayLarge,
+            fontSize: 35,
+            fontWeight: FontWeight.w400,
+            color: Colors.black,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(
+          height: 3,
+        ),
+        Container(
+          width: 300,
+          height: 1,
+          color: Colors.black,
+        ),
+        const SizedBox(
+          height: 7,
+        ),
+        GestureDetector(
+          onTap: () {
+            print("RecievedTap");
+            // navigate to a new page with the full screen image
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const FullScreenImage(
+                    "assets/images/Downstocker/FigmaFull.JPG"),
+              ),
+            );
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Container(
+              clipBehavior: Clip.hardEdge,
+              constraints: const BoxConstraints(
+                maxWidth: 220,
+              ),
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(
+                    255, 250, 253, 255), // Set the container color to blue
+                borderRadius: BorderRadius.circular(
+                    20), // Set the container edges to be curved
+                boxShadow: [
+                  // Add a dropshadow effect
+                  BoxShadow(
+                    color: Colors.black.withOpacity(
+                        0.5), // Set the shadow color to black with some opacity
+                    blurRadius: 10, // Set the blur radius of the shadow
+                    offset: const Offset(5, 5), // Set the offset of the shadow
+                  ),
+                ],
+              ),
+              child: DisplayImage(
+                imagePath: "assets/images/Downstocker/FigmaFull.JPG",
+                width: 220,
+                height: 300,
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        GestureDetector(
+          onTap: () {
+            // navigate to a new page with the full screen image
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const FullScreenImage(
+                  "assets/images/Downstocker/figmaStart.JPG",
+                  width: 1000,
+                  height: 300,
+                ),
+              ),
+            );
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Container(
+              clipBehavior: Clip.hardEdge,
+              constraints: const BoxConstraints(
+                maxWidth: 300,
+              ),
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(
+                    255, 250, 253, 255), // Set the container color to blue
+                borderRadius: BorderRadius.circular(
+                    20), // Set the container edges to be curved
+                boxShadow: [
+                  // Add a dropshadow effect
+                  BoxShadow(
+                    color: Colors.black.withOpacity(
+                        0.5), // Set the shadow color to black with some opacity
+                    blurRadius: 10, // Set the blur radius of the shadow
+                    offset: const Offset(5, 5), // Set the offset of the shadow
+                  ),
+                ],
+              ),
+              child: DisplayImage(
+                imagePath: "assets/images/Downstocker/figmaStart.JPG",
+                width: 300,
+                height: 220,
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        GestureDetector(
+          onTap: () {
+            // navigate to a new page with the full screen image
+            print("CLicked");
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const FullScreenImage(
+                  "assets/images/Downstocker/FigmaEnd.JPG",
+                  width: 800,
+                  height: 300,
+                ),
+              ),
+            );
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Container(
+              clipBehavior: Clip.hardEdge,
+              constraints: const BoxConstraints(
+                maxWidth: 300,
+              ),
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(
+                    255, 250, 253, 255), // Set the container color to blue
+                borderRadius: BorderRadius.circular(
+                    20), // Set the container edges to be curved
+                boxShadow: [
+                  // Add a dropshadow effect
+                  BoxShadow(
+                    color: Colors.black.withOpacity(
+                        0.5), // Set the shadow color to black with some opacity
+                    blurRadius: 10, // Set the blur radius of the shadow
+                    offset: const Offset(5, 5), // Set the offset of the shadow
+                  ),
+                ],
+              ),
+              child: DisplayImage(
+                imagePath: "assets/images/Downstocker/FigmaEnd.JPG",
+                width: 300,
+                height: 220,
+              ),
+            ),
+          ),
         ),
         const SizedBox(
           height: 20,

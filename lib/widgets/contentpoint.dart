@@ -248,7 +248,7 @@ class ContainerWidgetState extends State<ContainerWidget>
             left: _leftAnimation
                 .value, // adjust the left position based on the index
             child: Stack(
-              clipBehavior: Clip.none,
+              //clipBehavior: Clip.none,
               children: [
                 (widget.selected && !widget.open)
                     ? Container(
@@ -267,6 +267,7 @@ class ContainerWidgetState extends State<ContainerWidget>
                   alignment: const FractionalOffset(0, 1),
                   child: GestureDetector(
                     onTap: () {
+                      print("Ate Tap");
                       if (animController.isCompleted) {
                         //animController.reverse();
                       } else {

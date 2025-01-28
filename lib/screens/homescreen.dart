@@ -1055,7 +1055,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                   true) {
                                 toggleContentPoint();
                               } else if (atPlanet) {
-                                playSound("assets/sounds/button.mp3");
+                                playSound("button");
                                 atPlanet = false;
                                 moveBackFromPlanet();
                                 updateScanner();

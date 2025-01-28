@@ -1,12 +1,13 @@
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:image_network/image_network.dart';
 
 class FullScreenImage extends StatefulWidget {
-  // create a constructor to receive the image path
-  const FullScreenImage(this.imagePath, {super.key});
-  // create a field to store the image path
   final String imagePath;
+  final double? width;
+  final double? height;
+
+  const FullScreenImage(this.imagePath, {super.key, this.width, this.height});
 
   @override
   State<FullScreenImage> createState() => _FullScreenImageState();
@@ -27,33 +28,44 @@ class _FullScreenImageState extends State<FullScreenImage> {
     return imageUrl;
   }
 
-  // override the build method to return a widget
   @override
   Widget build(BuildContext context) {
     // Get the screen width and height
     final double screenWidth = MediaQuery.of(context).size.width;
     final double screenHeight = MediaQuery.of(context).size.height;
 
-    // return a scaffold widget with the photo view widget
+    // Use provided width and height if available, otherwise use screen dimensions
+    final double displayWidth = widget.width ?? screenWidth;
+    final double displayHeight = widget.height ?? screenHeight;
+    print("width: " + displayWidth.toString());
     return Scaffold(
-      body: FutureBuilder(
+      body: FutureBuilder<String>(
         future: _imageUrlFuture,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
-            print("IMAGE ERROR: " + snapshot.error.toString());
-            return Center(child: Text(snapshot.error.toString()));
+            print("IMAGE ERROR: ${snapshot.error}");
+            return Center(child: Text('Error: ${snapshot.error}'));
           } else {
             return Stack(
               children: [
-                // use a photo view widget to show the image with zoom and pan features
-                ImageNetwork(
-                  image: snapshot.data as String,
-                  width: screenWidth,
-                  height: screenHeight,
+                LayoutBuilder(
+                  builder: (BuildContext context, BoxConstraints constraints) {
+                    return InteractiveViewer(
+                      panEnabled: true,
+                      minScale: 0.1,
+                      maxScale: 4.0,
+                      child: Center(
+                        child: ImageNetwork(
+                          image: snapshot.data!,
+                          width: displayWidth,
+                          height: displayHeight,
+                        ),
+                      ),
+                    );
+                  },
                 ),
-                // use a positioned widget to place the exit button at the top right corner
                 Positioned(
                   top: 10,
                   right: 10,

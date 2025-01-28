@@ -54,6 +54,7 @@ class _MainAppState extends State<MainApp> {
         '/': (context) => const Initscreen(),
         '/home': (context) => homeScreen,
       },
+      //showPerformanceOverlay: true,
     );
   }
 }

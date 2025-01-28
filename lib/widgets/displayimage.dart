@@ -45,10 +45,13 @@ class _DisplayImageState extends State<DisplayImage> {
           print("IMAGE ERROR: " + snapshot.error.toString());
           return Text(snapshot.error.toString());
         } else {
-          return ImageNetwork(
-            image: snapshot.data as String,
-            width: widget.width,
-            height: widget.height,
+          return IgnorePointer(
+            ignoring: true,
+            child: ImageNetwork(
+              image: snapshot.data as String,
+              width: widget.width,
+              height: widget.height,
+            ),
           );
         }
       },

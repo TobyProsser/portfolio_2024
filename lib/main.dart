@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:portfolio_2024/screens/initscreen.dart';
 
 import 'screens/homescreen.dart';
@@ -12,9 +13,15 @@ void main() {
   print("First Line of code. Initialize widgets");
   WidgetsFlutterBinding.ensureInitialized();
 
-  //webPluginRegistrar.registerMessageHandler();
-  print("Before Run app, ensureItialized");
-  runApp(const MainApp());
+  // Locking the app to portrait mode
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]).then((_) {
+    //webPluginRegistrar.registerMessageHandler();
+    print("Before Run app, ensureItialized");
+    runApp(const MainApp());
+  });
 }
 
 class MainApp extends StatefulWidget {

@@ -3746,6 +3746,7 @@ class ClimbingAppDesignContentState extends State<ClimbingAppDesignContent>
   @override
   void initState() {
     super.initState();
+    print("One content init");
     getPDFUrl();
   }
 

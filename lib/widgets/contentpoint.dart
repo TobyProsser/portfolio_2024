@@ -148,6 +148,7 @@ class ContainerWidgetState extends State<ContainerWidget>
     _loadRiveFile();
     initAnimation();
     super.initState();
+    print("point Init");
   }
 
   @override
@@ -219,6 +220,8 @@ class ContainerWidgetState extends State<ContainerWidget>
       animController.addListener(() {
         setState(() {});
       });
+
+      print("point Animation Init");
     } catch (e) {
       print("ERROR: " + e.toString());
     }

@@ -37,7 +37,16 @@ class _FullScreenImageState extends State<FullScreenImage> {
     // Use provided width and height if available, otherwise use screen dimensions
     final double displayWidth = widget.width ?? screenWidth;
     final double displayHeight = widget.height ?? screenHeight;
-    print("width: " + displayWidth.toString());
+
+    // Check if width > height and device is mobile, then rotate the image
+    bool rotateImage = false;
+    if (widget.width != null && widget.height != null) {
+      if (widget.width! > widget.height! &&
+          MediaQuery.of(context).size.shortestSide < 600) {
+        rotateImage = true;
+      }
+    }
+
     return Scaffold(
       body: FutureBuilder<String>(
         future: _imageUrlFuture,
@@ -45,7 +54,6 @@ class _FullScreenImageState extends State<FullScreenImage> {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
-            print("IMAGE ERROR: ${snapshot.error}");
             return Center(child: Text('Error: ${snapshot.error}'));
           } else {
             return Stack(
@@ -57,10 +65,15 @@ class _FullScreenImageState extends State<FullScreenImage> {
                       minScale: 0.1,
                       maxScale: 4.0,
                       child: Center(
-                        child: ImageNetwork(
-                          image: snapshot.data!,
-                          width: displayWidth,
-                          height: displayHeight,
+                        child: Transform.rotate(
+                          angle: rotateImage
+                              ? 90 * 3.14159 / 180
+                              : 0, // Rotate by 90 degrees if needed
+                          child: ImageNetwork(
+                            image: snapshot.data!,
+                            width: displayWidth,
+                            height: displayHeight,
+                          ),
                         ),
                       ),
                     );
@@ -69,12 +82,32 @@ class _FullScreenImageState extends State<FullScreenImage> {
                 Positioned(
                   top: 10,
                   right: 10,
-                  child: IconButton(
-                    icon: const Icon(Icons.close, color: Colors.black),
-                    onPressed: () {
-                      // pop the current page from the navigation stack
+                  child: InkWell(
+                    onTap: () {
                       Navigator.pop(context);
                     },
+                    child: Container(
+                      width: 40,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.black,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.5),
+                            blurRadius: 4,
+                            offset: Offset(2, 2),
+                          ),
+                        ],
+                      ),
+                      child: Center(
+                        child: Icon(
+                          Icons.close,
+                          color: Colors.white,
+                          size: 20,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ],

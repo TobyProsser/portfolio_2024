@@ -167,8 +167,13 @@ class ContainerWidgetState extends State<ContainerWidget>
         duration: const Duration(seconds: 1),
       );
       // Initialize the width animation from 50 to 300 pixels
-      Tween<double> tween =
-          Tween<double>(begin: 30, end: (widget.screenWidth * .9));
+      Tween<double> tween = Tween<double>(
+          begin: 30,
+          end: widget.screenWidth < 850 ? (widget.screenWidth * .9) : 765);
+      print("screenW: " +
+          widget.screenWidth.toString() +
+          " widthW: " +
+          tween.end.toString());
       // Initialize the height animation from 50 to 200 pixels
       Tween<double> tween1 =
           Tween<double>(begin: 30, end: (widget.screenHeight * 2) / 3);

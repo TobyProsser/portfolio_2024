@@ -630,26 +630,27 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   Future<void> playSound(String sound) async {
     try {
+      String url;
       if (sound == "button") {
         if (_isSound1) {
-          String url1 = await getAudioDownloadURL("Select1.wav");
-          // Play the first sound
-          await _audioPlayer.setUrl(url1);
-          _audioPlayer.play();
+          url = await getAudioDownloadURL("assets/sounds/Select1.wav");
         } else {
-          String url1 = await getAudioDownloadURL("assets/sounds/Select2.wav");
-          // Play the second sound
-          await _audioPlayer.setUrl(url1);
-          _audioPlayer.play();
+          url = await getAudioDownloadURL("assets/sounds/Select2.wav");
         }
-
         setState(() {
           _isSound1 = !_isSound1;
         });
       } else {
-        String url = await getAudioDownloadURL(sound);
-        await _audioPlayer.setFilePath(url);
+        url = await getAudioDownloadURL(sound);
+      }
+
+      // Check if the URL is valid
+      if (url != null) {
+        print('Playing URL: $url');
+        await _audioPlayer.setUrl(url);
         _audioPlayer.play();
+      } else {
+        print('Failed to get download URL');
       }
     } catch (e) {
       print('Error playing audio: $e');
@@ -1189,7 +1190,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               if (!atPlanet) {
                 playSound("button");
                 atPlanet = true;
-                playSound("sounds/FutureToPlanetClip.mp3");
+                playSound("assets/sounds/FutureToPlanetClip.mp3");
                 moveToPlanet();
                 updateScanner();
               } else {
@@ -1199,7 +1200,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               print("Left");
               playSound("button");
               if (!atPlanet) {
-                playSound("sounds/MoveToSideClip.mp3");
+                playSound("assets/sounds/MoveToSideClip.mp3");
                 widget.curPlanet--;
                 movePlane();
               } else {
@@ -1246,7 +1247,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               if (!atPlanet) {
                 widget.curPlanet++;
                 movePlane();
-                playSound("sounds/MoveToSideClip.mp3");
+                playSound("assets/sounds/MoveToSideClip.mp3");
               } else {
                 bool contentOpen = false;
                 //If a content container was open when clicked, open the next moon's content

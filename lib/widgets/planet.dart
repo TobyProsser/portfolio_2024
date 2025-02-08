@@ -251,13 +251,13 @@ class PlanetState extends State<Planet> with SingleTickerProviderStateMixin {
   double findFlagHeight() {
     double number = 0;
     if (widget.planetLookNum == 0) {
-      number = 110;
-    } else if (widget.planetLookNum == 1) {
-      number = 60;
-    } else if (widget.planetLookNum == 2) {
       number = 90;
+    } else if (widget.planetLookNum == 1) {
+      number = 40;
+    } else if (widget.planetLookNum == 2) {
+      number = 70;
     } else {
-      number = 80;
+      number = 60;
     }
 
     if (widget.screenWidth > 1100) {

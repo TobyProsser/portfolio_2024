@@ -1525,8 +1525,11 @@ class _BsiAboutContentState extends State<BsiAboutContent> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) =>
-                      const FullScreenImage("assets/images/BSIInfo/Slide1.jpg"),
+                  builder: (context) => const FullScreenImage(
+                    "assets/images/BSIInfo/Slide1.jpg",
+                    width: 300,
+                    height: 175,
+                  ),
                 ),
               );
             },
@@ -1568,8 +1571,11 @@ class _BsiAboutContentState extends State<BsiAboutContent> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) =>
-                      const FullScreenImage("assets/images/BSIInfo/Slide2.jpg"),
+                  builder: (context) => const FullScreenImage(
+                    "assets/images/BSIInfo/Slide2.jpg",
+                    width: 300,
+                    height: 175,
+                  ),
                 ),
               );
             },
@@ -1611,8 +1617,11 @@ class _BsiAboutContentState extends State<BsiAboutContent> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) =>
-                      const FullScreenImage("assets/images/BSIInfo/Slide3.PNG"),
+                  builder: (context) => const FullScreenImage(
+                    "assets/images/BSIInfo/Slide3.PNG",
+                    width: 300,
+                    height: 175,
+                  ),
                 ),
               );
             },
@@ -1654,8 +1663,11 @@ class _BsiAboutContentState extends State<BsiAboutContent> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) =>
-                      const FullScreenImage("assets/images/BSIInfo/Slide4.PNG"),
+                  builder: (context) => const FullScreenImage(
+                    "assets/images/BSIInfo/Slide4.PNG",
+                    width: 300,
+                    height: 175,
+                  ),
                 ),
               );
             },
@@ -1697,8 +1709,11 @@ class _BsiAboutContentState extends State<BsiAboutContent> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) =>
-                      const FullScreenImage("assets/images/BSIInfo/Slide5.PNG"),
+                  builder: (context) => const FullScreenImage(
+                    "assets/images/BSIInfo/Slide5.PNG",
+                    width: 300,
+                    height: 175,
+                  ),
                 ),
               );
             },
@@ -1800,7 +1815,7 @@ class BSIDevContentState extends State<BSIDevContent>
         Padding(
           padding: const EdgeInsets.all(20.0),
           child: Text(
-            "I made a collage of designs that inspired me and drew some basic sketches to outline my vision. Then, I turned to figma to begin the UI design process.",
+            "After creating an inspiration board and drawing some basic sketches to outline my vision, I turned to figma to begin the UI design process.",
             style: GoogleFonts.interTight(
               textStyle: Theme.of(context).textTheme.displayLarge,
               fontSize: 20,
@@ -1819,8 +1834,11 @@ class BSIDevContentState extends State<BSIDevContent>
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) =>
-                    const FullScreenImage("assets/images/BSIDev/BSIDEV1.png"),
+                builder: (context) => const FullScreenImage(
+                  "assets/images/BSIDev/BSIDEV1.png",
+                  width: 450,
+                  height: 300,
+                ),
               ),
             );
           },
@@ -1828,7 +1846,7 @@ class BSIDevContentState extends State<BSIDevContent>
             padding: const EdgeInsets.all(20.0),
             child: Container(
               constraints: const BoxConstraints(
-                maxWidth: 400,
+                maxWidth: 300,
               ),
               clipBehavior: Clip.hardEdge,
               decoration: BoxDecoration(
@@ -1882,8 +1900,11 @@ class BSIDevContentState extends State<BSIDevContent>
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) =>
-                    const FullScreenImage("assets/images/BSIDev/BSIDEV2.png"),
+                builder: (context) => const FullScreenImage(
+                  "assets/images/BSIDev/BSIDEV2.png",
+                  width: 450,
+                  height: 300,
+                ),
               ),
             );
           },
@@ -1891,7 +1912,7 @@ class BSIDevContentState extends State<BSIDevContent>
             padding: const EdgeInsets.all(20.0),
             child: Container(
               constraints: const BoxConstraints(
-                maxWidth: 400,
+                maxWidth: 300,
               ),
               clipBehavior: Clip.hardEdge,
               decoration: BoxDecoration(
@@ -2454,8 +2475,11 @@ class _GalleryContentState extends State<GalleryContent> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) =>
-                      const FullScreenImage("assets/images/GamesGallery1.png"),
+                  builder: (context) => const FullScreenImage(
+                    "assets/images/GamesGallery1.png",
+                    width: 175,
+                    height: 300,
+                  ),
                 ),
               );
             },
@@ -2499,8 +2523,11 @@ class _GalleryContentState extends State<GalleryContent> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) =>
-                      const FullScreenImage("assets/images/GamesGallery2.png"),
+                  builder: (context) => const FullScreenImage(
+                    "assets/images/GamesGallery2.png",
+                    width: 200,
+                    height: 300,
+                  ),
                 ),
               );
             },
@@ -2559,64 +2586,96 @@ class _GalleryContentState extends State<GalleryContent> {
           const SizedBox(
             height: 7,
           ),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Container(
-              clipBehavior: Clip.hardEdge,
-              constraints: const BoxConstraints(
-                maxWidth: 300,
-              ),
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(
-                    255, 250, 253, 255), // Set the container color to blue
-                borderRadius: BorderRadius.circular(
-                    20), // Set the container edges to be curved
-                boxShadow: [
-                  // Add a dropshadow effect
-                  BoxShadow(
-                    color: Colors.black.withOpacity(
-                        0.5), // Set the shadow color to black with some opacity
-                    blurRadius: 10, // Set the blur radius of the shadow
-                    offset: const Offset(5, 5), // Set the offset of the shadow
+          GestureDetector(
+            onTap: () {
+              // navigate to a new page with the full screen image
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const FullScreenImage(
+                    "assets/images/ShellDrawing.jpeg",
+                    width: 430,
+                    height: 210,
                   ),
-                ],
-              ),
-              child: DisplayImage(
-                imagePath: "assets/images/ShellDrawing.jpeg",
-                width: 300,
-                height: 175,
+                ),
+              );
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Container(
+                clipBehavior: Clip.hardEdge,
+                constraints: const BoxConstraints(
+                  maxWidth: 430,
+                ),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(
+                      255, 250, 253, 255), // Set the container color to blue
+                  borderRadius: BorderRadius.circular(
+                      20), // Set the container edges to be curved
+                  boxShadow: [
+                    // Add a dropshadow effect
+                    BoxShadow(
+                      color: Colors.black.withOpacity(
+                          0.5), // Set the shadow color to black with some opacity
+                      blurRadius: 10, // Set the blur radius of the shadow
+                      offset:
+                          const Offset(5, 5), // Set the offset of the shadow
+                    ),
+                  ],
+                ),
+                child: DisplayImage(
+                  imagePath: "assets/images/ShellDrawing.jpeg",
+                  width: 430,
+                  height: 210,
+                ),
               ),
             ),
           ),
           const SizedBox(
             height: 20,
           ),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Container(
-              clipBehavior: Clip.hardEdge,
-              constraints: const BoxConstraints(
-                maxWidth: 300,
-              ),
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(
-                    255, 250, 253, 255), // Set the container color to blue
-                borderRadius: BorderRadius.circular(
-                    20), // Set the container edges to be curved
-                boxShadow: [
-                  // Add a dropshadow effect
-                  BoxShadow(
-                    color: Colors.black.withOpacity(
-                        0.5), // Set the shadow color to black with some opacity
-                    blurRadius: 10, // Set the blur radius of the shadow
-                    offset: const Offset(5, 5), // Set the offset of the shadow
+          GestureDetector(
+            onTap: () {
+              // navigate to a new page with the full screen image
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const FullScreenImage(
+                    "assets/images/EyeDrawing.jpg",
+                    width: 430,
+                    height: 210,
                   ),
-                ],
-              ),
-              child: DisplayImage(
-                imagePath: "assets/images/EyeDrawing.jpg",
-                width: 300,
-                height: 175,
+                ),
+              );
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Container(
+                clipBehavior: Clip.hardEdge,
+                constraints: const BoxConstraints(
+                  maxWidth: 430,
+                ),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(
+                      255, 250, 253, 255), // Set the container color to blue
+                  borderRadius: BorderRadius.circular(
+                      20), // Set the container edges to be curved
+                  boxShadow: [
+                    // Add a dropshadow effect
+                    BoxShadow(
+                      color: Colors.black.withOpacity(
+                          0.5), // Set the shadow color to black with some opacity
+                      blurRadius: 10, // Set the blur radius of the shadow
+                      offset:
+                          const Offset(5, 5), // Set the offset of the shadow
+                    ),
+                  ],
+                ),
+                child: DisplayImage(
+                  imagePath: "assets/images/EyeDrawing.jpg",
+                  width: 430,
+                  height: 210,
+                ),
               ),
             ),
           ),
@@ -2792,10 +2851,24 @@ class AboutContent extends StatefulWidget {
 
 class _AboutContentState extends State<AboutContent> {
   double? aspectRatio;
-
+  String? pdfUrl;
   @override
   void initState() {
     super.initState();
+    getPDFUrl();
+  }
+
+  Future<String?> getPDFUrl() async {
+    try {
+      final Reference ref =
+          FirebaseStorage.instance.ref().child("assets/pdfs/Resume2025PDF.pdf");
+      final String url = await ref.getDownloadURL();
+      setState(() {
+        pdfUrl = url;
+      });
+    } catch (e) {
+      print("Error Fetching Resume: $e");
+    }
   }
 
   @override
@@ -2831,54 +2904,39 @@ class _AboutContentState extends State<AboutContent> {
             padding: const EdgeInsets.all(20.0),
             child: Container(
               clipBehavior: Clip.hardEdge,
-              constraints: const BoxConstraints(
-                maxWidth: 220,
-              ),
+              width: 220,
+              height: 300,
               decoration: BoxDecoration(
-                color: const Color.fromARGB(
-                    255, 250, 253, 255), // Set the container color to blue
-                borderRadius: BorderRadius.circular(
-                    20), // Set the container edges to be curved
+                color: const Color.fromARGB(255, 250, 253, 255),
+                borderRadius: BorderRadius.circular(20),
                 boxShadow: [
-                  // Add a dropshadow effect
                   BoxShadow(
-                    color: Colors.black.withOpacity(
-                        0.5), // Set the shadow color to black with some opacity
-                    blurRadius: 10, // Set the blur radius of the shadow
-                    offset: const Offset(5, 5), // Set the offset of the shadow
+                    color: Colors.black.withOpacity(0.5),
+                    blurRadius: 10,
+                    offset: const Offset(5, 5),
                   ),
                 ],
               ),
-              child: Stack(
-                children: [
-                  DisplayImage(
-                    imagePath: "assets/images/ResumeImage.png",
-                    width: 200,
-                    height: 300,
-                  ),
-                  Positioned(
-                    top: 10,
-                    right: 10,
-                    child: IconButton(
-                      icon: const Icon(Icons.preview, color: Colors.black),
-                      onPressed: () {
-                        print("Button CLicked");
+              child: pdfUrl != null
+                  ? PDFViewer(
+                      url: pdfUrl,
+                      onToggleFullScreen: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => FullScreenImage(
-                                "assets/images/ResumeImage.png"),
+                            builder: (context) => PDFViewer(
+                              url: pdfUrl,
+                              isFullScreen: true,
+                              onToggleFullScreen: () {
+                                Navigator.pop(context);
+                              },
+                            ),
                           ),
                         );
                       },
-                    ),
-                  ),
-                ],
-              ),
+                    )
+                  : Center(child: CircularProgressIndicator()),
             ),
-          ),
-          const SizedBox(
-            height: 20,
           ),
           const SizedBox(
             height: 20,
@@ -3963,13 +4021,15 @@ class ClimbingAppDesignContentState extends State<ClimbingAppDesignContent>
         ),
         GestureDetector(
           onTap: () {
-            print("RecievedTap");
             // navigate to a new page with the full screen image
             Navigator.push(
               context,
               MaterialPageRoute(
                 builder: (context) => const FullScreenImage(
-                    "assets/images/Downstocker/FigmaFull.JPG"),
+                  "assets/images/Downstocker/FigmaFull.JPG",
+                  width: 220,
+                  height: 300,
+                ),
               ),
             );
           },
@@ -4157,8 +4217,11 @@ class ReviewBookDesignContentState extends State<ReviewBookDesignContent>
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) =>
-                    const FullScreenImage("assets/images/ReviewBookDesign.png"),
+                builder: (context) => const FullScreenImage(
+                  "assets/images/ReviewBookDesign.png",
+                  width: 300,
+                  height: 430,
+                ),
               ),
             );
           },
@@ -4236,15 +4299,18 @@ class ReviewBookDesignContentState extends State<ReviewBookDesignContent>
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) =>
-                    const FullScreenImage("assets/images/ShiftAppDesign.png"),
+                builder: (context) => const FullScreenImage(
+                  "assets/images/ShiftAppDesign.png",
+                  width: 300,
+                  height: 430,
+                ),
               ),
             );
           },
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Container(
-              width: 250,
+              width: 300,
               clipBehavior: Clip.hardEdge,
               decoration: BoxDecoration(
                 color: const Color.fromARGB(
@@ -4263,8 +4329,8 @@ class ReviewBookDesignContentState extends State<ReviewBookDesignContent>
               ),
               child: const DisplayImage(
                 imagePath: "assets/images/ShiftAppDesign.png",
-                width: 250,
-                height: 300,
+                width: 300,
+                height: 430,
               ),
             ),
           ),
@@ -4274,6 +4340,88 @@ class ReviewBookDesignContentState extends State<ReviewBookDesignContent>
         ),
         Text(
           "Shifts",
+          style: GoogleFonts.interTight(
+            textStyle: Theme.of(context).textTheme.displayLarge,
+            fontSize: 35,
+            fontWeight: FontWeight.w400,
+            color: Colors.black,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(
+          height: 3,
+        ),
+        Container(
+          width: 300,
+          height: 1,
+          color: Colors.black,
+        ),
+        const SizedBox(
+          height: 7,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Text(
+            "Coming Soon...",
+            style: GoogleFonts.interTight(
+              textStyle: Theme.of(context).textTheme.displayLarge,
+              fontSize: 20,
+              fontWeight: FontWeight.w400,
+              color: Colors.black,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        GestureDetector(
+          onTap: () {
+            // navigate to a new page with the full screen image
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const FullScreenImage(
+                  "assets/images/YogaSS.png",
+                  width: 430,
+                  height: 210,
+                ),
+              ),
+            );
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Container(
+              width: 430,
+              clipBehavior: Clip.hardEdge,
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(
+                    255, 250, 253, 255), // Set the container color to blue
+                borderRadius: BorderRadius.circular(
+                    20), // Set the container edges to be curved
+                boxShadow: [
+                  // Add a dropshadow effect
+                  BoxShadow(
+                    color: Colors.black.withOpacity(
+                        0.5), // Set the shadow color to black with some opacity
+                    blurRadius: 10, // Set the blur radius of the shadow
+                    offset: const Offset(5, 5), // Set the offset of the shadow
+                  ),
+                ],
+              ),
+              child: const DisplayImage(
+                imagePath: "assets/images/YogaSS.png",
+                width: 430,
+                height: 210,
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        Text(
+          "ProjectYoga",
           style: GoogleFonts.interTight(
             textStyle: Theme.of(context).textTheme.displayLarge,
             fontSize: 35,
